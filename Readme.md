@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Александр Святченко](https://up.htmlacademy.ru/htmlcss/25/user/997831).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём Рудов](https://htmlacademy.ru/profile/artrudov).
 
 ---
 
