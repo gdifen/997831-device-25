@@ -1,88 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
-  <header class="main-header">
-    <nav class="main-navigation">
-      <a class="logo-header" href="index.html">
-        <img src="лого шапки" width="" height=""
-        alt="Логотип интернет магазина DEVICE">
-      </a>
-      <!--  тут будет поиск по сайту  -->
-      <ul class="user-navigation-header">
-        <li class="login-link">Войти </li>
-        </ul>
-        <ul class="site-navigation-header">
-          <li><a href="delivery.html">ДОСТАВКА</a></li>
-          <li><a href="warranty.html">ГАРАНТИЯ</a></li>
-          <li><a href="contacts.html">КОНТАКТЫ</a></li>
-        </ul>
-        <ul class="commodity-operations-header">
-          <li class="compare-header"><a href="compare.html">Сравнить</a></li>
-          <li class="basket-header"><a href="basket.html">Корзина</a></li>
-          <li class="navigation-catalog">
-          <a href="catalog.html">КАТАЛОГ ТОВАРОВ</a></li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Девайс</title>
+</head>
+
+<body>
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img src="лого шапки" width="" height="" alt="Логотип интернет магазина DEVICE"></a>
+    <a class="header__login" href="login.html">Войти</a>
+    <ul class=header-operations>
+      <li><a class="header-operations__compare" href="compare.html">Сравнить</a></li>
+      <li><a class="header-operations__basket" href="basket.html">Корзина</a></li>
+      <li>
+        <!--Поиск по сайту-->
+      </li>
+    </ul>
+    <nav class="navigation">
+      <ul class="navigation-list">
+        <li><a href="delivery.html">доставка</a></li>
+        <li><a href="warranty.html">гарантия</a></li>
+        <li><a href="contacts.html">контакты</a></li>
+        <li class="navigation-list__catalog"><a href="catalog.html">каталог товаров</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <h1 class="hidden-headline">интернет магазин DEVICE</h1>
+  <main class="main">
+    <h1 class="hidden">интернет магазин DEVICE</h1>
     <!--Красный блок-->
-    <section class="about us">
+    <section class="partners">
       <h3>О нас</h3>
-      <p class="p-section">Огромный выбор гаджетов не оставит равнодушным гика,
+      <p>Огромный выбор гаджетов не оставит равнодушным гика,
         который есть в каждом из нас.</p>
-        <p class="p-section">Мы можем доставить ваш товар в самые отдаленые
-           точки России!
-           DEVICE работает с многими транспортными компаниями:</p>
-          <ul class="partners">
-            <li>Деловые Линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
-          </ul>
-          <a class="more" href="more.html">ПОДРОБНЕЕ О НАС</a>
+      <p>Мы можем доставить ваш товар в самые отдаленые
+        точки России!
+        DEVICE работает с многими транспортными компаниями:</p>
+      <ul>
+        <li>Деловые Линии</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a class="partners__button" href="more.html">подробнее о нас</a>
     </section>
     <section class="contacts">
       <h3>Контакты</h3>
-      <p class="p-section">Вы можете забрать товар сами, заехав в наш офис.
+      <p>Вы можете забрать товар сами, заехав в наш офис.
         Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
       </p>
-      <a class="map"> <img src="карта" height="" width=""
-        alt="Адрес на карте"> </a>
-      <a class="write us" href="writeus.html">НАПИШИТЕ НАМ</a>
+      <a class="contacts__map"> <img src="карта" height="" width="" alt="Адрес на карте"> </a>
+      <a class="contacts__button" href="write-us.html">напишите нам</a>
     </section>
   </main>
 
-  <footer class="main-footer">
-    <a class="footer-logo" href="index.html">
-      <img src="лого подвала" width="" height=""
-      alt="Логотип интернет магазина DEVICE"></a>
-    <ul class="user-navigation-footer">
-      <li class="login-link">Войти</li>
-      </ul>
-    <ul class="commodity-operations-footer">
-      <li class="compare-footer"><a href="compare.html">Сравнить</a></li>
-      <li class="basket-footer"><a href="basket.html">Корзина</a></li>
+  <footer class="footer">
+    <a class="footer__logo" href="index.html">
+      <img src="лого подвала" width="" height="" alt="Логотип интернет магазина DEVICE">
+    </a>
+    <a class="footer__login" href="login.html">Войти</a>
+    <ul class="footer-operations">
+      <li><a class="footer-operations__compare" href="compare.html">Сравнить</a></li>
+      <li><a class="footer-operations__basket" href="basket.html">Корзина</a></li>
     </ul>
-    <ul class="site-navigation-footer">
-<li><a href="delivery.html">ДОСТАВКА</a></li>
-<li><a href="warranty.html">ГАРАНТИЯ</a></li>
-<li><a href="contacts.html">КОНТАКТЫ</a></li>
-</ul>
-<p class="address">г. Москва, ул. Строителей, 15</p>
-<p class="phone">Тел. +7(495)495-95-95</p>
-<ul class="social">
-  <li><a class="social-Facebook" href="#">Facebook</a></li>
-  <li><a class="social-Instagram" href="#">Instagram</a></li>
-  <li><a class="social-Twitter" href="#">Twitter</a></li>
-</ul>
-<a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
-  html academy</a>
-      </footer>
+    <nav class="footer-navigation">
+      <ul class="footer-navigation-list">
+        <li><a href="delivery.html">доставка</a></li>
+        <li><a href="warranty.html">гарантия</a></li>
+        <li><a href="contacts.html">контакты</a></li>
+      </ul>
+    </nav>
+    <p class="address">г. Москва, ул. Строителей, 15</p>
+    <p class="phone">Тел. +7(495)495-95-95</p>
+    <div class="social">
+      <ul>
+        <li><a class="social-Facebook" href="#">Facebook</a></li>
+        <li><a class="social-Instagram" href="#">Instagram</a></li>
+        <li><a class="social-Twitter" href="#">Twitter</a></li>
+      </ul>
+    </div>
+    <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
+      html academy</a>
+  </footer>
 
-  </body>
+</body>
+
 </html>
