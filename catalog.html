@@ -9,22 +9,36 @@
 <body>
   <header class="header">
     <a class="header__logo" href="index.html">
-      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE"></a>
-    <a class="header__login" href="login.html">Войти</a>
+      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу"></a>
+    <div class="header__login">
+      <a href="login.html">Валентин Петухов</a>
+      <button>Выйти</button>
+    </div>
     <ul class="header-operations">
       <li><a class="header-operations__compare" href="compare.html">Сравнить</a></li>
       <li><a class="header-operations__basket" href="basket.html">Корзина</a></li>
-      <li>
-        <!--Поиск по сайту-->
-      </li>
     </ul>
+    <form class="search">
+      <input type="search" name="search" placeholder="Поиск по сайту">
+      <input type="submit" value="Найти">
+    </form>
     <nav class="header-navigation">
       <ul class="header-navigation-list">
         <li><a href="delivery.html">доставка</a></li>
         <li><a href="warranty.html">гарантия</a></li>
         <li><a href="contacts.html">контакты</a></li>
-        <li class="header-navigation-list__catalog"><a href="catalog.html">каталог товаров</a></li>
       </ul>
+      <div class="opening-catalog">
+        <button type="button">католог товаров</button>
+        <ul>
+          <li><a href="popular-1.html">Виртуальная реальность</a></li>
+          <li><a href="popular-2.html"> Моноподы для селфи</a></li>
+          <li><a href="popular-3.html">Экшн-камеры</a></li>
+          <li><a href="popular-4.html">Фитнес-браслеты</a></li>
+          <li><a href="popular-5.html">Умные часы</a></li>
+          <li><a href="popular-6.html">Квадрокоптеры</a></li>
+        </ul>
+      </div>
     </nav>
     <h1 class="page-title">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
@@ -37,24 +51,30 @@
 
   <main class="main">
     <section class="catalog">
-      <aside class="filter">
-        <h2>фильтр:</h2>
-        <!--<h3>Стоимость</h3>-->
-        <h3>Цвет</h3>
-        <ul class="filter-color">
-          <li>Черный</li>
-          <li>Белый</li>
-          <li>Синий</li>
-          <li>Красный</li>
-          <li>Розовый</li>
-        </ul>
-        <h3>Bluetooth</h3>
-        <ul class="filter-bluetooth">
-          <li>Есть</li>
-          <li>Нет</li>
-        </ul>
-        <a class="filter__button" href="filter.html">показать</a>
-      </aside>
+      <section class="filters">
+          <h2>фильтр:</h2>
+        <form>
+          <!--Стоимость-->
+          <fieldset class="filters-color">
+            <legend>Цвет</legend>
+            <ul>
+              <li><label><input type="checkbox" name="black" checked>Черный</label></li>
+              <li><label><input type="checkbox" name="white">Белый</label></li>
+              <li><label><input type="checkbox" name="blue" checked>Синий</label></li>
+              <li><label><input type="checkbox" name="red" checked>Красный</label></li>
+              <li><label><input type="checkbox" name="pink">Розовый</label></li>
+            </ul>
+          </fieldset>
+          <fieldset class="filters-bluetooth">
+            <legend>Bluetooth</legend>
+            <ul>
+              <li><label><input type="radio" name="Bluetooth" value="yes" checked> Есть</label></li>
+              <li><label><input type="radio" name="Bluetooth" value="no">Нет</label></li>
+            </ul>
+          </fieldset>
+          <button class="button">показать</button>
+        </form>
+      </section>
       <ul class="catalog-list">
         <li class="catalog-list__item-1">
           <article>
@@ -91,9 +111,12 @@
 
   <footer class="footer">
     <a class="footer__logo" href="index.html">
-      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE">
+      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу">
     </a>
-    <a class="footer__login" href="login.html">Войти</a>
+    <div class="footer__login">
+      <a href="login.html">Валентин Петухов</a>
+      <button>Выйти</button>
+    </div>
     <ul class="footer-operations">
       <li><a class="footer-operations__compare" href="compare.html">Сравнить</a></li>
       <li><a class="footer-operations__basket" href="basket.html">Корзина</a></li>
@@ -109,9 +132,9 @@
     <p class="phone">Тел. +7(495)495-95-95</p>
     <div class="social">
       <ul>
-        <li><a class="social-Facebook" href="#">Facebook</a></li>
-        <li><a class="social-Instagram" href="#">Instagram</a></li>
-        <li><a class="social-Twitter" href="#">Twitter</a></li>
+        <li><a class="social-Facebook" href="#" aria-label="мы в Facebook">Facebook</a></li>
+        <li><a class="social-Instagram" href="#" aria-label="мы в Instagram">Instagram</a></li>
+        <li><a class="social-Twitter" href="#" aria-label="мы в Twitter">Twitter</a></li>
       </ul>
     </div>
     <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">

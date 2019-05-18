@@ -9,22 +9,33 @@
 <body>
   <header class="header">
     <a class="header__logo" href="index.html">
-      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE"></a>
+      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу"></a>
     <a class="header__login" href="login.html">Войти</a>
     <ul class=header-operations>
       <li><a class="header-operations__compare" href="compare.html">Сравнить</a></li>
       <li><a class="header-operations__basket" href="basket.html">Корзина</a></li>
-      <li>
-        <!--Поиск по сайту-->
-      </li>
     </ul>
+    <form class="search">
+      <input type="search" name="search" placeholder="Поиск по сайту">
+      <input type="submit" value="Найти">
+    </form>
     <nav class="navigation">
       <ul class="navigation-list">
         <li><a href="delivery.html">доставка</a></li>
         <li><a href="warranty.html">гарантия</a></li>
         <li><a href="contacts.html">контакты</a></li>
-        <li class="navigation-list__catalog"><a href="catalog.html">каталог товаров</a></li>
       </ul>
+      <div class="opening-catalog">
+        <button type="button">католог товаров</button>
+        <ul>
+          <li><a href="popular-1.html">Виртуальная реальность</a></li>
+          <li><a href="popular-2.html"> Моноподы для селфи</a></li>
+          <li><a href="popular-3.html">Экшн-камеры</a></li>
+          <li><a href="popular-4.html">Фитнес-браслеты</a></li>
+          <li><a href="popular-5.html">Умные часы</a></li>
+          <li><a href="popular-6.html">Квадрокоптеры</a></li>
+        </ul>
+      </div>
     </nav>
     <h1 class="visually-hidden">интернет магазин DEVICE</h1>
   </header>
@@ -59,16 +70,24 @@
         <li><a href="popular-6.html">Квадрокоптеры</a></li>
       </ul>
     </section>
+    <!--тут будут сервисы
     <section class="services">
       <ul class="services-list">
-        <li>доставка</li>
-        <li>гарантия</li>
-        <li>кредит</li>
+        <li><button>доставка</button></li>
+        <li><button>гарантия</button></li>
+        <li><button>кредит</button></li>
       </ul>
       <h2>Доставка</h2>
       <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
         Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+      <h2>Гарантия</h2>
+      <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+        Товар, не дом, конечно же.</p>
+      <h2>Кредит</h2>
+      <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+        условия кредита. Выгодные для нашего банка, разумеется.</p>
     </section>
+  -->
     <section class="friends">
       <ul>
         <li><a href="https://www.dji.com"><img src="dji" alt="dji logo"></a></li>
@@ -96,14 +115,32 @@
       <p>Вы можете забрать товар сами, заехав в наш офис.
         Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
       </p>
-      <a class="contacts__map"> <img src="img/map.jpg" alt="Адрес на карте"> </a>
-      <a class="contacts__button" href="write-us.html">напишите нам</a>
+      <a class="contacts-map"> <img src="img/map.jpg" alt="Адрес на карте, город Москва, улица Строителей, дом 15">
+      </a>
+      <a class="contacts-button" href="write-us.html">напишите нам</a>
     </section>
+    <div class="contacts-button-window">
+      <form>
+        <button type="button"><image src="кнопка" alt="кнопка закрыть"></button>
+        <label>
+          Ваше имя:
+          <input type="text" name="username" placeholder="Имя Фамилия" required>
+        </label>
+        <label>Ваш e-mail:
+          <input type="email" name="email" placeholder="email@example.com" required>
+        </label>
+        <label>
+          Текст письма:
+          <input type="text" name="content" placeholder="В свободной форме" required>
+        </label>
+        <input type="submit" value="отправить">
+      </form>
+    </div>
   </main>
 
   <footer class="footer">
     <a class="footer__logo" href="index.html">
-      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE">
+      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу">
     </a>
     <a class="footer__login" href="login.html">Войти</a>
     <ul class="footer-operations">
@@ -121,9 +158,9 @@
     <p class="phone">Тел. +7(495)495-95-95</p>
     <div class="social">
       <ul>
-        <li><a class="social-Facebook" href="#">Facebook</a></li>
-        <li><a class="social-Instagram" href="#">Instagram</a></li>
-        <li><a class="social-Twitter" href="#">Twitter</a></li>
+        <li><a class="social-Facebook" href="#" aria-label="мы в Facebook">Facebook</a></li>
+        <li><a class="social-Instagram" href="#" aria-label="мы в Instagram">Instagram</a></li>
+        <li><a class="social-Twitter" href="#" aria-label="мы в Twitter">Twitter</a></li>
       </ul>
     </div>
     <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
