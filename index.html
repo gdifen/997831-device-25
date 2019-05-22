@@ -16,7 +16,7 @@
       <li><a class="header-operations__basket" href="basket.html">Корзина</a></li>
     </ul>
     <form class="search">
-      <input type="search" name="search" placeholder="Поиск по сайту">
+      <button>Поиск по сайту</button>
       <input type="submit" value="Найти">
     </form>
     <nav class="navigation">
@@ -26,7 +26,7 @@
         <li><a href="contacts.html">контакты</a></li>
       </ul>
       <div class="opening-catalog">
-        <button type="button">католог товаров</button>
+        <a href="catalog.html">католог товаров</a>
         <ul>
           <li><a href="popular-1.html">Виртуальная реальность</a></li>
           <li><a href="popular-2.html"> Моноподы для селфи</a></li>
@@ -48,18 +48,18 @@
         <p class="products__description">Самая длинная палка для селфи доступна в нашем магазине.
           Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
         <a href="product.html">подробнее</a>
-        <table class="products-table">
-          <tr class="products-table__line-1">
-            <td>8,5 м</td>
-            <td>5 кг</td>
-            <td>Карбон</td>
-          </tr>
-          <tr class="products-table__line-2">
-            <td>Длина палки</td>
-            <td>Вес палки</td>
-            <td>Материал</td>
-          </tr>
-        </table>
+        <div class="products-specification">
+          <ul class="products-specification__list-1">
+            <li>8,5 м</li>
+            <li>5 кг</li>
+            <li>Карбон</li>
+          </ul>
+          <ul class="products-specification__list-2">
+            <li>Длина палки</li>
+            <li>Вес палки</li>
+            <li>Материал</li>
+          </ul>
+        </div>
       </article>
       <ul class="products-menu">
         <li><a href="popular-1.html">Виртуальная реальность</a></li>
@@ -70,24 +70,29 @@
         <li><a href="popular-6.html">Квадрокоптеры</a></li>
       </ul>
     </section>
-    <!--тут будут сервисы
     <section class="services">
-      <ul class="services-list">
+      <ul class="services-button">
         <li><button>доставка</button></li>
         <li><button>гарантия</button></li>
         <li><button>кредит</button></li>
       </ul>
-      <h2>Доставка</h2>
-      <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
-        Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-      <h2>Гарантия</h2>
-      <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-        Товар, не дом, конечно же.</p>
-      <h2>Кредит</h2>
-      <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
-        условия кредита. Выгодные для нашего банка, разумеется.</p>
+      <ul class="services-list">
+        <li>
+          <h2>Доставка</h2>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
+            Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <h2>Гарантия</h2>
+        </li><li>
+          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+            Товар, не дом, конечно же.</p>
+        </li><li>
+          <h2>Кредит</h2>
+          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+            условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </li>
+      </ul>
     </section>
-  -->
+
     <section class="friends">
       <ul>
         <li><a href="https://www.dji.com"><img src="dji" alt="dji logo"></a></li>
@@ -119,23 +124,6 @@
       </a>
       <a class="contacts-button" href="write-us.html">напишите нам</a>
     </section>
-    <div class="contacts-button-window">
-      <form>
-        <button type="button"><image src="кнопка" alt="кнопка закрыть"></button>
-        <label>
-          Ваше имя:
-          <input type="text" name="username" placeholder="Имя Фамилия" required>
-        </label>
-        <label>Ваш e-mail:
-          <input type="email" name="email" placeholder="email@example.com" required>
-        </label>
-        <label>
-          Текст письма:
-          <input type="text" name="content" placeholder="В свободной форме" required>
-        </label>
-        <input type="submit" value="отправить">
-      </form>
-    </div>
   </main>
 
   <footer class="footer">
@@ -166,6 +154,26 @@
     <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
       html academy</a>
   </footer>
+
+  <div class="contacts-button-window">
+    <button type="button">
+      <image src="кнопка" alt="кнопка закрыть">
+    </button>
+    <form>
+      <label>
+        Ваше имя:
+        <input type="text" name="username" placeholder="Имя Фамилия" required>
+      </label>
+      <label>Ваш e-mail:
+        <input type="email" name="email" placeholder="email@example.com" required>
+      </label>
+      <label>
+        Текст письма:
+        <input type="text" name="content" placeholder="В свободной форме" required>
+      </label>
+      <input type="submit" value="отправить">
+    </form>
+  </div>
 
 </body>
 
