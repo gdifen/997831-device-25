@@ -4,30 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Девайс</title>
+  <link href="css/fonts/opensans-300-normal.woff" rel="stylesheet">
+  <link href="css/fonts/opensans-300-normal.woff2" rel="stylesheet">
+  <link href="css/fonts/gilroy-800-normal.woff" rel="stylesheet">
+  <link href="css/fonts/gilroy-800-normal.woff2" rel="stylesheet">
+  <link href="css/fonts/gilroy-300-normal.woff" rel="stylesheet">
+  <link href="css/fonts/gilroy-300-normal.woff2" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="header">
-    <a class="header__logo" href="index.html">
+  <header class="main-header">
+    <a class="header-logo" href="index.html">
       <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу"></a>
-    <a class="header__login" href="login.html">Войти</a>
-    <ul class=header-operations>
-      <li><a class="header-operations__compare" href="compare.html">Сравнить</a></li>
-      <li><a class="header-operations__basket" href="basket.html">Корзина</a></li>
+    <ul class="header-operations">
+      <li class="search">
+        <form>
+          <input type="search" name="search" placeholder="Поиск по сайту">
+          <button>Найти</button>
+        </form>
+      </li>
+      <li class="header-login icon">
+        <a href="login.html">Войти</a>
+      </li>
+      <li class="header-compare icon"><a href="compare.html">Сравнить</a>
+      </li>
+      <li class="header-basket icon"><a href="basket.html">Корзина</a></li>
     </ul>
-    <form class="search">
-      <button>Поиск по сайту</button>
-      <input type="submit" value="Найти">
-    </form>
-    <nav class="navigation">
-      <ul class="navigation-list">
-        <li><a href="delivery.html">доставка</a></li>
-        <li><a href="warranty.html">гарантия</a></li>
-        <li><a href="contacts.html">контакты</a></li>
-      </ul>
+    <div class="header-conteiner">
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li><a href="delivery.html">доставка</a></li>
+          <li><a href="warranty.html">гарантия</a></li>
+          <li><a href="contacts.html">контакты</a></li>
+        </ul>
+      </nav>
       <div class="opening-catalog">
-        <a href="catalog.html">католог товаров</a>
-        <ul>
+        <a class="catalog-link" href="catalog.html">католог товаров</a>
+        <ul class="catalog-list">
           <li><a href="popular-1.html">Виртуальная реальность</a></li>
           <li><a href="popular-2.html"> Моноподы для селфи</a></li>
           <li><a href="popular-3.html">Экшн-камеры</a></li>
@@ -36,11 +51,11 @@
           <li><a href="popular-6.html">Квадрокоптеры</a></li>
         </ul>
       </div>
-    </nav>
+    </div>
     <h1 class="visually-hidden">интернет магазин DEVICE</h1>
   </header>
 
-  <main class="main">
+  <main class="main-content">
     <section class="products">
       <article>
         <img src="img/slider-1.png" alt="изображение товара">
@@ -48,18 +63,16 @@
         <p class="products__description">Самая длинная палка для селфи доступна в нашем магазине.
           Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
         <a href="product.html">подробнее</a>
-        <div class="products-specification">
-          <ul class="products-specification__list-1">
-            <li>8,5 м</li>
-            <li>5 кг</li>
-            <li>Карбон</li>
-          </ul>
-          <ul class="products-specification__list-2">
-            <li>Длина палки</li>
-            <li>Вес палки</li>
-            <li>Материал</li>
-          </ul>
-        </div>
+        <ul class="products-specification__list-1">
+          <li>8,5 м</li>
+          <li>5 кг</li>
+          <li>Карбон</li>
+        </ul>
+        <ul class="products-specification__list-2">
+          <li>Длина палки</li>
+          <li>Вес палки</li>
+          <li>Материал</li>
+        </ul>
       </article>
       <ul class="products-menu">
         <li><a href="popular-1.html">Виртуальная реальность</a></li>
@@ -82,10 +95,12 @@
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
             Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           <h2>Гарантия</h2>
-        </li><li>
+        </li>
+        <li>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
             Товар, не дом, конечно же.</p>
-        </li><li>
+        </li>
+        <li>
           <h2>Кредит</h2>
           <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
             условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -101,76 +116,87 @@
         <li><a href="https://www.vive.com"><img src="vive" alt="vive logo"></a></li>
       </ul>
     </section>
-    <section class="we">
-      <h2>О нас</h2>
-      <p>Огромный выбор гаджетов не оставит равнодушным гика,
-        который есть в каждом из нас.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленые
-        точки России!
-        DEVICE работает с многими транспортными компаниями:</p>
-      <ul>
-        <li>Деловые Линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="we__button" href="more.html">подробнее о нас</a>
-    </section>
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <p>Вы можете забрать товар сами, заехав в наш офис.
-        Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
-      </p>
-      <a class="contacts-map"> <img src="img/map.jpg" alt="Адрес на карте, город Москва, улица Строителей, дом 15">
-      </a>
-      <a class="contacts-button" href="write-us.html">напишите нам</a>
-    </section>
+    <div class="add-info">
+      <section class="we">
+        <div class="decoration-line-1"></div>
+        <h2>О нас</h2>
+        <p class="we__paragraph-1">Огромный выбор гаджетов не оставит равнодушным гика,
+          который есть в каждом из нас.</p>
+        <p class="we__paragraph-2">Мы можем доставить ваш товар в самые отдаленые
+          точки России!
+          DEVICE работает с многими транспортными компаниями:</p>
+        <ul>
+          <li>Деловые Линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="more" href="more.html">подробнее о нас</a>
+      </section>
+      <section class="contacts">
+        <div class="decoration-line-1"></div>
+        <h2>Контакты</h2>
+        <p>Вы можете забрать товар сами, заехав в наш офис.
+          Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+        </p>
+        <a class="contacts-map">
+          <img src="img/map.jpg" alt="Адрес на карте, город Москва, улица Строителей, дом 15">
+        </a>
+        <a class="write-us" href="write-us.html">напишите нам</a>
+      </section>
+    </div>
   </main>
 
-  <footer class="footer">
-    <a class="footer__logo" href="index.html">
-      <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу">
-    </a>
-    <a class="footer__login" href="login.html">Войти</a>
-    <ul class="footer-operations">
-      <li><a class="footer-operations__compare" href="compare.html">Сравнить</a></li>
-      <li><a class="footer-operations__basket" href="basket.html">Корзина</a></li>
-    </ul>
-    <nav class="footer-navigation">
-      <ul class="footer-navigation-list">
-        <li><a href="delivery.html">доставка</a></li>
-        <li><a href="warranty.html">гарантия</a></li>
-        <li><a href="contacts.html">контакты</a></li>
-      </ul>
-    </nav>
-    <p class="address">г. Москва, ул. Строителей, 15</p>
-    <p class="phone">Тел. +7(495)495-95-95</p>
-    <div class="social">
-      <ul>
-        <li><a class="social-Facebook" href="#" aria-label="мы в Facebook">Facebook</a></li>
-        <li><a class="social-Instagram" href="#" aria-label="мы в Instagram">Instagram</a></li>
-        <li><a class="social-Twitter" href="#" aria-label="мы в Twitter">Twitter</a></li>
-      </ul>
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-container__line-1">
+        <a class="footer-logo" href="index.html">
+          <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу">
+        </a>
+        <ul class="footer-container__list">
+          <li><a class="footer-login icon" href="login.html">Войти</a></li>
+          <li><a class="footer-compare icon" href="compare.html">Сравнить</a></li>
+          <li><a class="footer-basket icon" href="basket.html">Корзина</a></li>
+        </ul>
+      </div>
+      <div class="footer-container__line-2">
+        <nav class="footer-navigation">
+          <ul class="footer-navigation-list">
+            <li><a href="delivery.html">доставка</a></li>
+            <li><a href="warranty.html">гарантия</a></li>
+            <li><a href="contacts.html">контакты</a></li>
+          </ul>
+        </nav>
+        <p class="address">г. Москва, ул. Строителей, 15</p>
+        <p class="phone">Тел.: +7(495)495-95-95</p>
+      </div>
+      <div class="footer-container__line-3">
+        <div class="decoration-line-2"></div>
+        <ul class="social">
+          <li><a class="social-Facebook" href="#" aria-label="мы в Facebook"></a></li>
+          <li><a class="social-Instagram" href="#" aria-label="мы в Instagram"></a></li>
+          <li><a class="social-Twitter" href="#" aria-label="мы в Twitter"></a></li>
+        </ul>
+        <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
+        </a>
+      </div>
     </div>
-    <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
-      html academy</a>
   </footer>
 
-  <div class="contacts-button-window">
-    <button type="button">
-      <image src="кнопка" alt="кнопка закрыть">
+  <div class="contacts-window">
+    <button type="button" aria-label="кнопка закрытия окна">
     </button>
     <form>
-      <label>
-        Ваше имя:
-        <input type="text" name="username" placeholder="Имя Фамилия" required>
-      </label>
-      <label>Ваш e-mail:
-        <input type="email" name="email" placeholder="email@example.com" required>
-      </label>
-      <label>
-        Текст письма:
-        <input type="text" name="content" placeholder="В свободной форме" required>
-      </label>
+      <p><label>
+          Ваше имя:
+          <input type="text" name="username" placeholder="Имя Фамилия" required>
+        </label></p>
+      <p><label>Ваш e-mail:
+          <input type="email" name="email" placeholder="email@example.com" required>
+        </label></p>
+      <p><label>
+          Текст письма:
+          <input type="text" name="content" placeholder="В свободной форме" required>
+        </label></p>
       <input type="submit" value="отправить">
     </form>
   </div>

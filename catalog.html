@@ -4,30 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Девайс</title>
+  <link href="css/fonts/opensans-300-normal.woff" rel="stylesheet">
+  <link href="css/fonts/opensans-300-normal.woff2" rel="stylesheet">
+  <link href="css/fonts/gilroy-800-normal.woff" rel="stylesheet">
+  <link href="css/fonts/gilroy-800-normal.woff2" rel="stylesheet">
+  <link href="css/fonts/gilroy-300-normal.woff" rel="stylesheet">
+  <link href="css/fonts/gilroy-300-normal.woff2" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header class="header">
+  <header class="main-header">
     <a class="header__logo" href="index.html">
       <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу"></a>
-    <div class="header__login">
+      <div class="header-operations">
+      <div class="header__login">
       <a href="login.html">Валентин Петухов</a>
       <a href="exit.html">Выйти</a>
     </div>
-    <ul class="header-operations">
-      <li><a class="header-operations__compare" href="compare.html">Сравнить</a></li>
-      <li><a class="header-operations__basket" href="basket.html">Корзина</a></li>
-    </ul>
+    <div>
+      <a class="header-operations__compare" href="compare.html">Сравнить</a>
+      <a class="header-operations__basket" href="basket.html">Корзина</a>
+      </div>
     <form class="search">
-      <button>Поиск по сайту</button>
-      <input type="submit" value="Найти">
+      <input type="search" name="search" placeholder="Поиск по сайту">
+      <button>Найти</button>
     </form>
-    <nav class="header-navigation">
-      <ul class="header-navigation-list">
-        <li><a href="delivery.html">доставка</a></li>
-        <li><a href="warranty.html">гарантия</a></li>
-        <li><a href="contacts.html">контакты</a></li>
-      </ul>
+    </div>
+    <nav class="navigation">
+      <p><a href="delivery.html">доставка</a></p>
+        <p><a href="warranty.html">гарантия</a></p>
+        <p><a href="contacts.html">контакты</a></p>
       <div class="opening-catalog">
         <a href="catalog.html">католог товаров</a>
         <ul>
@@ -49,7 +57,7 @@
     <!--<h2>сортировка:</h2>-->
   </header>
 
-  <main class="main">
+  <main class="main-content">
     <section class="catalog">
       <section class="filters">
         <h2>фильтр:</h2>
@@ -116,7 +124,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="main-footer">
     <a class="footer__logo" href="index.html">
       <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу">
     </a>
@@ -137,11 +145,11 @@
     </nav>
     <p class="address">г. Москва, ул. Строителей, 15</p>
     <p class="phone">Тел. +7(495)495-95-95</p>
-      <ul class="social">
-        <li><a class="social-Facebook" href="#" aria-label="мы в Facebook">Facebook</a></li>
-        <li><a class="social-Instagram" href="#" aria-label="мы в Instagram">Instagram</a></li>
-        <li><a class="social-Twitter" href="#" aria-label="мы в Twitter">Twitter</a></li>
-      </ul>
+    <ul class="social">
+      <li><a class="social-Facebook" href="#" aria-label="мы в Facebook">Facebook</a></li>
+      <li><a class="social-Instagram" href="#" aria-label="мы в Instagram">Instagram</a></li>
+      <li><a class="social-Twitter" href="#" aria-label="мы в Twitter">Twitter</a></li>
+    </ul>
     <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
       html academy</a>
   </footer>
