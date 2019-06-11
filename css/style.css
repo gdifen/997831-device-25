@@ -42,6 +42,14 @@ a {
 }
 
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+
+
 /*  HEADER  */
 
 
@@ -53,11 +61,12 @@ a {
     top:21px;
 }
 .main-header{
+    box-sizing: border-box;
     background-color:#f7e296;
     width: 1160px; 
-    margin:0 140px;
+    margin:0 auto;
     margin-top: 40px;
-    padding: 55px 60px;
+    padding: 35px 60px;
     min-height: 300px;
     display: flex;
     flex-direction: column;
@@ -67,13 +76,11 @@ a {
     padding:0;
     margin:0;
     display:flex;
-    margin-bottom:55px;
+    margin-bottom:15px;
     align-items: center;
 }
 .search form{
     display:flex;
-    padding:0;
-    margin:0;
 }
 .search{
     width:440px;
@@ -87,8 +94,8 @@ a {
     background-image: url(/img/search.svg);
     content:"";
     background-repeat: no-repeat;
-    width:15px;
-    height:15px;
+    width:16px;
+    height:16px;
     position: absolute;
     left:-20px;
     bottom:13px;
@@ -102,10 +109,10 @@ a {
 .search button{
     display:none;
 }
-.search:hover form{
+.search:focus form{
     border-bottom:2px solid #000000;
 }
-.search:hover button{
+.search:focus button{
     display:block;
     padding:15px;
     background-color: #f7e296;
@@ -119,8 +126,8 @@ a {
     position: absolute;
     background-image: url(/img/user.svg);
     background-repeat: no-repeat;
-    width:15px;
-    height: 15px;
+    width:12px;
+    height: 12px;
     margin-left:-20px;
     margin-top:6px;
 }
@@ -129,8 +136,8 @@ a {
     position: absolute;
     background-image: url(/img/compare.svg);
     background-repeat: no-repeat;
-    width:15px;
-    height: 15px;
+    width:12px;
+    height: 12px;
     margin-left:-20px;
     margin-top:7px;
 }
@@ -139,8 +146,8 @@ a {
     position: absolute;
     background-image: url(/img/cart.svg);
     background-repeat: no-repeat;
-    width:15px;
-    height: 15px;
+    width:12px;
+    height: 12px;
     margin-left:-20px;
     margin-top:6px;
 }
@@ -149,7 +156,9 @@ margin-right:65px;
 margin-left:240px;
 }
 .navigation-list{
+    letter-spacing: 3.6px;
     display: flex;
+    flex-wrap: wrap;
 }   
 .opening-catalog::before{
     content:"";
@@ -194,7 +203,7 @@ margin-left:240px;
 /*  MAIN  */
 
 
-.products, .services, .friends{
+.products, .services{
     background-color: rgb(255, 0, 0);
 }
 
@@ -207,6 +216,9 @@ margin-left:240px;
     font-size: 47px;
     margin-bottom:60px;
     color:#000000;
+}
+.friends a{
+    opacity: 0.2;
 }
 .add-info{
     display: flex;
@@ -221,9 +233,8 @@ margin-left:240px;
 .contacts{
     width:560px;
 }
-.we__paragraph-2{
-margin-top: 50px;
-margin-bottom: 95px;
+.add-info p{
+    line-height: 30px;
 }
 .contacts p{
     margin-bottom: 50px;
@@ -257,62 +268,67 @@ margin-bottom: 95px;
     list-style: none;
 }
 .main-footer{
+    padding: 0;
+    margin:0;
     background-color: #464646;
     color:#ffffff;
     width:100%;
     min-height: 325px;
+    box-sizing: border-box;
 }
 .main-footer a{
     color:#ffffff;
 }
-.footer-logo{
-    margin-right: 700px;
-}
 .footer-container__line-1{
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 12px;
 }
 .footer-container__list{
     padding:0;
     margin:0;
+    margin-left: auto;
     display: flex;   
+    flex-wrap: wrap;
 }
 .footer-container__list li{
-    margin-right: 65px;
+    margin-left:42px;
 }
 .footer-container{
     display:flex;
     width:  1160px;
     padding-top:65px;
     flex-direction: column;
-    margin: 0 140px;
+    margin:0 auto;
 }
 .footer-container__line-2{
     display:flex;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
 }
-.footer-navigation-list{
-    display:flex;
+.footer-navigation{
     font-family: "Gilroy";
     font-weight: 800;
     font-size: 18px;
     color:#ffffff;
     text-transform: uppercase;
+    flex-wrap: wrap;
     letter-spacing: 3.6px;
+    margin-left: 105px;
+    margin-right: auto;
+}
+
+.footer-navigation-list {
+    display: flex;
+
 }
 .footer-navigation-list li{
-    margin-right:37px;
-}
-.phone{
-    margin-left: auto;
+ margin:0 17px;
 }
 .address{
     order:-3;
-    margin-right: auto;
 }
 .footer-container__line-3{
     display:flex;
-    vertical-align: top;
+    position: relative;
 }
 .social{ 
     display:flex;
@@ -320,81 +336,52 @@ margin-bottom: 95px;
     position: relative;
 }
 .decoration-line-2{
+    position: absolute;
     width: 80px;
     height: 7px;
     background-color: #ffc600;
+    top:13px;
+}
+.footer-container__list a{
+    display:flex;
+}
+.icon{
+    margin-right: 11px;
 }
 .social-Facebook::before{
+    position: absolute;
     content:"";
     background-image: url(/img/facebook.svg);
     background-repeat: no-repeat;
-    position: absolute;
     width:32px;
     height:32px;
     opacity: 0.3;
-    margin-left: -60px;
+    bottom: -12px;
+    margin-left:-78px;
 }
 .social-Instagram::before{
+    position: absolute;
     content:"";
     background-image: url(/img/insta.svg);
     background-repeat: no-repeat;
-    position: absolute;
     width:32px;
     height:32px;
     opacity: 0.3;
-    
+    bottom: -12px;
+    margin-left:-22px;
 }
 .social-Twitter::before{
+    position: absolute;
     content:"";
     background-image: url(/img/twit.svg);
     background-repeat: no-repeat;
-    position: absolute;
     width:32px;
     height:32px;
     opacity: 0.3;
-    margin-left:60px;
-   
+    margin-left:32px;
+    bottom: -12px;
 }
-.html-academy::before{
-    content:"";
-    background-image: url(/img/logo-htmlacademy.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    width:27px;
-    height:35px;
-    margin-left:-26px;
-    margin-top:-25px;
-}
-.footer-login::before{
-    content: "";
-    position: absolute;
-    background-image: url(/img/user.svg);
-    background-repeat: no-repeat;
-    width:15px;
-    height: 15px;
-    margin-left:-20px;
-    margin-top:6px;
-}
-.footer-compare::before{
-    content: "";
-    position: absolute;
-    background-image: url(/img/compare.svg);
-    background-repeat: no-repeat;
-    width:15px;
-    height: 15px;
-    margin-left:-20px;
-    margin-top:7px;
-}
-.footer-basket::before{
-    content: "";
-    position: absolute;
-    background-image: url(/img/cart.svg);
-    background-repeat: no-repeat;
-    width:15px;
-    height: 15px;
-    margin-left:-20px;
-    margin-top:6px;
-}
+
 .footer-logo:hover,
 .footer-container__list li:hover,
 .footer-navigation-list li:hover,
