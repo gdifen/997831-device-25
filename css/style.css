@@ -79,16 +79,44 @@ html {
     margin-bottom:15px;
     align-items: center;
 }
+.search input{  
+    padding:14px;
+    background-color: #f7e296;
+    color:rgba(0, 0, 0, 0.3);
+    border:none;
+    width:100%;
+}
 .search form{
     display:flex;
 }
 .search{
+    box-sizing: border-box;
     width:440px;
     color:#000000;
     order:-4;
     position: relative;
-    margin-left:25px;
     margin-right: auto;
+    padding-left: 25px;
+}
+.search button{
+    display:none;
+    margin-bottom: -2px;
+    padding: 12px;
+    background-color: #f7e296;
+    border: 2px solid #000000;
+}
+.search:focus-within{
+    border-bottom: 2px solid #000000;
+}
+.search form:focus-within button{
+    display:block;
+}
+.search button:hover{
+    background-color: #000000;
+    color:#ffffff;
+}
+.search button:active{
+    color:rgba(255, 255, 255, 0.3);
 }
 .search::before{
     background-image: url(/img/search.svg);
@@ -97,29 +125,8 @@ html {
     width:16px;
     height:16px;
     position: absolute;
-    left:-20px;
-    bottom:13px;
-}
-.search input{  
-    padding:14px;
-    background-color: #f7e296;
-    color:rgba(0, 0, 0, 0.3);
-    border:none;
-}
-.search button{
-    display:none;
-}
-.search:focus form{
-    border-bottom:2px solid #000000;
-}
-.search:focus button{
-    display:block;
-    padding:15px;
-    background-color: #f7e296;
-    border: 2px solid #000000;
-    border-bottom: none;
-    margin-left: auto;
-    margin-top:1px;
+    margin-left:-23px;
+    margin-top:15px;
 }
 .header-login::before{
     content: "";
@@ -128,7 +135,7 @@ html {
     background-repeat: no-repeat;
     width:12px;
     height: 12px;
-    margin-left:-20px;
+    margin-left:-23px;
     margin-top:6px;
 }
 .header-compare::before{
@@ -148,36 +155,42 @@ html {
     background-repeat: no-repeat;
     width:12px;
     height: 12px;
-    margin-left:-20px;
+    margin-left:-22px;
     margin-top:6px;
 }
 .header-compare{
-margin-right:65px;
-margin-left:240px;
+    margin-right:65px;
+    margin-left:240px;
 }
 .navigation-list{
     letter-spacing: 3.6px;
     display: flex;
     flex-wrap: wrap;
 }   
-.opening-catalog::before{
+.catalog-link::before,
+.catalog-link::after{
     content:"";
     position: absolute;
-    background-image: url(/img/plus.svg);
-    background-repeat: no-repeat;
-    width:15px;
-    height: 15px;
+    background-color: #b8a974;
+    width:2px;
+    height: 16px;
+    left:238px;
+    top:2px; 
+}
+.catalog-link::before{
+    transform: rotate(90deg)
 }
 .opening-catalog{
-    margin-right:auto;
+    position: relative;
     order:-1;
+    margin-right:281px;
 }
 .catalog-list{
     display:none;
 }
 .navigation-list li:nth-child(2){
-    margin-right:115px;
-    margin-left:40px;
+    margin-left:34px;
+    margin-right: 104px;
 }
 .header-conteiner{
     display:flex;
@@ -188,13 +201,11 @@ margin-left:240px;
     text-transform: uppercase;
     letter-spacing: 3.6px;
 }
-.header-logo:hover, 
-.header-operations li:hover,
+.header-logo:hover,
 .navigation-list li:hover{
     opacity: 0.6;
 }
-.header-logo:active, 
-.header-operations li:active,
+.header-logo:active,
 .navigation-list li:active{
     opacity: 0.3;
 }
@@ -217,8 +228,54 @@ margin-left:240px;
     margin-bottom:60px;
     color:#000000;
 }
-.friends a{
+.friends ul{
+    display:flex;
+    position: relative;
+}
+.friends{
+    width: 1160px;
+    margin:0 auto;
+    margin-bottom: 200px;
+}
+.logo-1::before{
+    position: absolute;
+    content:"";
+    background-image:url(/img/dji-logo.png);
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 100px;
     opacity: 0.2;
+    margin-left: -50px;
+}
+.logo-2::before{
+    position: absolute;
+    content:"";
+    background-image:url(/img/sp-gadgets-logo.png);
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 100px;
+    opacity: 0.2;
+    margin-left: 250px;
+}
+.logo-3::before{
+    position: absolute;
+    content:"";
+    background-image:url(/img/gopro-logo.png);
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 100px;
+    opacity: 0.2;
+    margin-left: 600px;
+}
+.logo-4::before{
+    position: absolute;
+    content:"";
+    background-image:url(/img/vive-logo.png);
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 100px;
+    opacity: 0.2;
+    margin-left: 900px;
 }
 .add-info{
     display: flex;
@@ -246,18 +303,25 @@ margin-left:240px;
     align-self: center;
     margin-bottom: 55px;
 }
-.more, .write-us{
+.more, 
+.write-us{
+    position: relative;
     font-family: "Gilroy";
     font-size: 18px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3.6px;
-    margin-top:85px;
+    line-height: 24px;
     display:block;
-    background-color: #f0c52e;
+    order: 5;
+}
+.write-us::before,
+.more::before{
+    content: "";
+    position: absolute;
     width: 260px;
     height: 8px;
-    text-align: center;
+    background-color:#f0c52e;
 }
 
 
@@ -345,6 +409,13 @@ margin-left:240px;
 .footer-container__list a{
     display:flex;
 }
+.footer-container__list li:first-child{
+    display: flex;
+}
+.footer-container__list .exit{
+    margin-left:20px;
+    color:rgba(255, 255, 255, 0.3)
+}
 .icon{
     margin-right: 11px;
 }
@@ -401,13 +472,81 @@ margin-left:240px;
 
 
 .contacts-window{
+    position: relative;
+    box-sizing: border-box;
     font-family: "Gilroy";
     font-weight: 800;
     font-size: 18px;
     width: 960px;
+    min-height: 553px;
     box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
     margin: 0 auto;
+    padding: 95px 100px;
 }
 .contacts-window input{
+    margin-top:13px;
     background-color: #f2f2f2;
+    border:none;
+    padding:20px 20px;
+    width:360px;
+}
+.contacts-window form{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.name{
+    margin-right:auto;
+}
+.letter input{
+    width:760px;
+    min-height: 156px;
+}
+.close {
+    background-color: #f0c52e;
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border:none;
+    opacity: 0.5;
+}
+    .close:hover {
+    opacity: 1;
+}
+    .close:active{
+    opacity: 0.3;
+}
+    .close:before, .close:after {
+    position: absolute;
+    top:12px;
+    right:26px;
+    content: """";
+    height: 30px;
+    width: 2px;
+    background-color: #e5e5e5;
+}
+    .close:before {
+    transform: rotate(45deg);
+}
+    .close:after {
+    transform: rotate(-45deg);
+}
+.send{
+    position: relative;
+    border:none;
+    background:none;
+    margin-top:55px;
+}
+.send::before{
+    position: absolute;
+    content: "";
+    width:200px;
+    height: 8px;
+    background-color: #f0c52e;
+}
+.contacts-window p{
+    color:#000000;
 }
