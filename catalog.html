@@ -16,29 +16,35 @@
 
 <body>
   <header class="main-header">
-    <a class="header__logo" href="index.html">
+    <div class="header-block-1">
+    <a class="header-logo" href="index.html">
       <img src="img/device.svg" alt="Логотип интернет магазина DEVICE, ведет на главную страницу"></a>
-      <div class="header-operations">
-      <div class="header__login">
-      <a href="login.html">Валентин Петухов</a>
-      <a href="exit.html">Выйти</a>
-    </div>
-    <div>
-      <a class="header-operations__compare" href="compare.html">Сравнить</a>
-      <a class="header-operations__basket" href="basket.html">Корзина</a>
-      </div>
-    <form class="search">
-      <input type="search" name="search" placeholder="Поиск по сайту">
-      <button>Найти</button>
-    </form>
-    </div>
-    <nav class="navigation">
-      <p><a href="delivery.html">доставка</a></p>
-        <p><a href="warranty.html">гарантия</a></p>
-        <p><a href="contacts.html">контакты</a></p>
-      <div class="opening-catalog">
-        <a href="catalog.html">католог товаров</a>
-        <ul>
+    <ul class="header-operations">
+      <li class="search">
+        <form>
+          <input type="search" name="search" placeholder="Поиск по сайту">
+          <button>Найти</button>
+        </form>
+      </li>
+      <li class="header-login">
+        <a href="login.html">Валентин Петухов</a>
+        <a class="exit" href="#">Выйти</a>
+      </li>
+      <li class="header-compare"><a href="compare.html">Сравнить</a>
+      </li>
+      <li class="header-basket"><a href="basket.html">Корзина</a></li>
+    </ul>
+    <div class="header-conteiner">
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li><a href="delivery.html">доставка</a></li>
+          <li><a href="warranty.html">гарантия</a></li>
+          <li><a href="contacts.html">контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header-opening-catalog">
+        <a class="header-catalog" href="catalog.html">каталог товаров</a>
+        <ul class="header-catalog-list">
           <li><a href="popular-1.html">Виртуальная реальность</a></li>
           <li><a href="popular-2.html"> Моноподы для селфи</a></li>
           <li><a href="popular-3.html">Экшн-камеры</a></li>
@@ -47,14 +53,17 @@
           <li><a href="popular-6.html">Квадрокоптеры</a></li>
         </ul>
       </div>
-    </nav>
+    </div>
+    </div>
+    <div class="header-block-2">
     <h1 class="page-title">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
       <li><a href="catalog.html">Каталог товаров</a></li>
-      <li class="breadcrumbs__current">Моноподы для селфи</li>
+      <li><a class="breadcrumbs__current">Моноподы для селфи</a></li>
     </ul>
     <!--<h2>сортировка:</h2>-->
+    </div>
   </header>
 
   <main class="main-content">
@@ -90,37 +99,39 @@
           <button>показать</button>
         </form>
       </section>
-      <ul class="catalog-list">
+    <section class="products">
+      <ul class="products-list">
         <li>
           <article>
-            <a href="id1.html">Любительская селфи-палка</a>
             <img src="img/item-1.jpg" alt="Изображение товара">
-            <p>500 руб</p>
+            <p><a href="id1.html">Любительская селфи-палка</a>
+            500 руб</p>
           </article>
         </li>
         <li>
           <article>
-            <a href="id2.html">Профессиональная селфи-палка</a>
             <img src="img/item-2.jpg" alt="Изображение товара">
-            <p>1500 руб</p>
+            <p><a href="id2.html">Профессиональная селфи-палка</a>
+            1500 руб</p>
           </article>
         </li>
         <li>
           <article>
-            <a href="id3.html">Непотопляемая селфи-палка</a>
             <img src="img/item-3.jpg" alt="Изображение товара">
-            <p>2500 руб</p>
+            <p><a href="id3.html">Непотопляемая селфи-палка</a>
+            2500 руб</p>
           </article>
         </li>
         <li>
           <article>
-            <a href="id4.html">Селфи-палка «Следуй за мной»</a>
             <img src="img/item-4.jpg" alt="Изображение товара">
-            <p>4900 руб</p>
+            <p><a href="id4.html">Селфи-палка «Следуй за мной»</a>
+            4900 руб</p>
           </article>
         </li>
       </ul>
       <!--Пагинация-->
+      </section>
     </section>
   </main>
 
