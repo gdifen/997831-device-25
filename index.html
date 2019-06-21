@@ -34,7 +34,6 @@
         <li class="header-basket"><a href="basket.html">Корзина</a></li>
       </ul>
       <div class="header-conteiner">
-        <div>
         <a class="header-catalog" href="catalog.html">каталог товаров</a>
         <nav class="navigation">
           <ul class="navigation-list">
@@ -43,26 +42,36 @@
             <li><a href="contacts.html">контакты</a></li>
           </ul>
         </nav>
-        </div>
-          <ul class="header-catalog-list">
-            <li><a href="popular-1.html">Виртуальная реальность</a></li>
-            <li><a href="popular-2.html"> Моноподы для селфи</a></li>
-            <li><a href="popular-3.html">Экшн-камеры</a></li>
-            <li><a href="popular-4.html">Фитнес-браслеты</a></li>
-            <li><a href="popular-5.html">Умные часы</a></li>
-            <li><a href="popular-6.html">Квадрокоптеры</a></li>
-          </ul>
-        </div>
-      <h1 class="visually-hidden">интернет магазин DEVICE</h1>
+      </div>
+      <div class="header-catalog-block">
+        <ul class="header-catalog-list">
+          <li>
+            <a href="popular-1.html">Виртуальная реальность</a>
+            <a href="popular-2.html"> Моноподы для селфи</a>
+            <a href="popular-3.html">Экшн-камеры</a>
+          </li>
+          <li>
+            <a href="popular-4.html">Фитнес-браслеты</a>
+          <a href="popular-5.html">Умные часы</a>
+        </li>
+          <li><a href="popular-6.html">Квадрокоптеры</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <h1 class="visually-hidden">интернет магазин DEVICE</h1>
     </div>
   </header>
 
   <main class="main-content">
     <section class="index-catalog">
       <div class="radio-bar">
-      <input class="slide-1" type="radio" checked>
-      <input class="slide-2" type="radio">
-      <input class="slite-3" type="radio">
+        <input id="slide-1" type="radio" checked name="slide">
+        <label for="slide-1"></label>
+        <input id="slide-2" type="radio" name="slide">
+        <label for="slide-2"></label>
+        <input id="slide-3" type="radio" name="slide">
+        <label for="slide-3"></label>
       </div>
       <article class="popular product-1">
         <img src="img/slider-1.png" alt="изображение товара">
@@ -127,7 +136,7 @@
       </article>
       <ul class="products-menu">
         <li><a class="products-link-1" href="popular-1.html">Виртуальная реальность</a></li>
-        <li><a class="products-link-2" href="popular-2.html"> Моноподы для селфи</a></li>
+        <li><a class="products-link-2" href="popular-2.html"> Моноподы<br> для селфи</a></li>
         <li><a class="products-link-3" href="popular-3.html">Экшн-камеры</a></li>
         <li><a class="products-link-4" href="popular-4.html">Фитнес-браслеты</a></li>
         <li><a class="products-link-5" href="popular-5.html">Умные часы</a></li>
@@ -136,9 +145,9 @@
     </section>
     <section class="services">
       <ul class="services-button">
-        <li><a class="button-delivery" href="#">доставка</a></li>
-        <li><a class="button-guarantee" href="#">гарантия</a></li>
-        <li><a class="button-credit" href="#">кредит</a></li>
+        <li><button class="button-delivery">доставка</button></li>
+        <li><button class="button-guarantee">гарантия</button></li>
+        <li><button class="button-credit">кредит</button></li>
       </ul>
       <div class="services-list">
         <div class="service-delivery">
@@ -149,7 +158,7 @@
         <div class="service-guarantee">
           <h2>Гарантия</h2>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-          Товар, не дом, конечно же.</p>
+            Товар, не дом, конечно же.</p>
         </div>
         <div class="service-credit">
           <h2>Кредит</h2>
@@ -159,12 +168,12 @@
       </div>
     </section>
 
-    <section class="friends">
+    <section class="company-products">
       <ul>
-        <li><a class="logo-1" href="https://www.dji.com"></a></li>
-        <li><a class="logo-2" href="http://www.sp-gadgets.com"></a></li>
-        <li><a class="logo-3" href="https://www.gopro.com"></a></li>
-        <li><a class="logo-4" href="https://www.vive.com"></a></li>
+        <li><a class="company-logo logo-1" href="https://www.dji.com"></a></li>
+        <li><a class="company-logo logo-2" href="http://www.sp-gadgets.com"></a></li>
+        <li><a class="company-logo logo-3" href="https://www.gopro.com"></a></li>
+        <li><a class="company-logo logo-4" href="https://www.vive.com"></a></li>
       </ul>
     </section>
     <div class="add-info">
@@ -274,9 +283,9 @@
       <div class="footer-container__line-3">
         <div class="decoration-line-2"></div>
         <ul class="social">
-          <li><a class="social-Facebook" href="#" aria-label="мы в Facebook"></a></li>
-          <li><a class="social-Instagram" href="#" aria-label="мы в Instagram"></a></li>
-          <li><a class="social-Twitter" href="#" aria-label="мы в Twitter"></a></li>
+          <li><a class="social-icon Facebook" href="#" aria-label="мы в Facebook"></a></li>
+          <li><a class="social-icon Instagram" href="#" aria-label="мы в Instagram"></a></li>
+          <li><a class="social-icon Twitter" href="#" aria-label="мы в Twitter"></a></li>
         </ul>
         <a class="html-academy" href="https://htmlacademy.ru/intensive/htmlcss">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -303,7 +312,7 @@
         </label></p>
       <p class="letter"><label>
           Текст письма:</br>
-          <input type="text" name="content" placeholder="В свободной форме" required>
+          <textarea placeholder="В свободной форме" required></textarea>
         </label></p>
       <button class="send">Отправить</button>
     </form>
