@@ -173,15 +173,17 @@ body {
 .login-link::before {
     content: "";
     position: absolute;
-    background-image: url(../img/user.svg);
     background-repeat: no-repeat;
     width: 12px;
-    height: 12px;
+    height: 12px
+}
+
+.login-link::before {
+    background-image: url(../img/user.svg);
     margin-left: -26px;
     margin-top: 6px
 }
 
-.header-basket a::before,
 .header-compare a::before {
     background-image: url(../img/compare.svg);
     margin-left: -20px;
@@ -282,14 +284,14 @@ body {
     padding-left: 60px;
     padding-top: 18px;
     width: 1160px;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .page-title {
     font-family: "Gilroy";
     font-size: 47px;
     letter-spacing: .47px;
-    color: #000;
+    color: #000
 }
 
 .breadcrumbs {
@@ -339,21 +341,21 @@ body {
 
 .popular img {
     display: block;
-    position: relative;
+    position: relative
 }
 
 .product-1 img {
     width: 384px;
     height: 486px;
     margin-top: -112px;
-    margin-right: 125px;
+    margin-right: 125px
 }
 
 .product-2 img {
     height: 485px;
     width: 345px;
     margin-top: -70px;
-    margin-right: 200px;
+    margin-right: 200px
 }
 
 .product-3 img {
@@ -425,11 +427,11 @@ body {
 }
 
 .products-2 .popular-slogan {
-    width: 258px;
+    width: 258px
 }
 
 .product-3 .popular-slogan {
-    width: 500px;
+    width: 500px
 }
 
 .popular-description a {
@@ -622,14 +624,14 @@ ul .products-link-2::after {
 .services {
     width: 100%;
     background-color: #e5e5e5;
-    min-height: 288px;
+    min-height: 288px
 }
 
 .services-block {
     width: 1160px;
     margin: 0 auto;
     position: relative;
-    display: flex;
+    display: flex
 }
 
 .services-button button {
@@ -662,7 +664,7 @@ ul .products-link-2::after {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: -9px;
+    top: -9px
 }
 
 .services-list h2 {
@@ -864,7 +866,7 @@ ul .products-link-2::after {
     margin-bottom: 72px;
     width: 560px;
     height: 222px;
-    border: none;
+    border: 0
 }
 
 .add-info p {
@@ -932,7 +934,7 @@ ul .products-link-2::after {
 .sorting {
     background-color: #ebebeb;
     padding-left: 79px;
-    margin-bottom: 45px;
+    margin-bottom: 45px
 }
 
 .sorting ul {
@@ -984,17 +986,16 @@ ul .products-link-2::after {
 }
 
 .filters .filters-title {
-    margin: 0;
     background-color: #d9d9d9;
     padding: 23px 0 23px 25px;
-    margin-left: auto;
+    margin: 0 0 0 auto
 }
 
 .filters form {
     width: 200px;
     padding-top: 51px;
     margin-left: auto;
-    margin-right: 67px;
+    margin-right: 67px
 }
 
 .filters ul {
@@ -1090,8 +1091,28 @@ ul .products-link-2::after {
 .mark-new::before,
 .products-list a {
     font-family: "gilroy";
+    font-weight: 800
+}
+
+.mark-new::before {
+    content: "NEW";
+    text-align: center;
+    padding-top: 16px;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border: 2px solid #d7d7d7;
+    border-radius: 50%;
+    color: #bfbfbf;
+    top: 28px;
+    right: 27px;
+    z-index: 1;
+    font-size: 14px;
+    letter-spacing: .7px
+}
+
+.products-list a {
     font-size: 18px;
-    font-weight: 800;
     letter-spacing: .18px
 }
 
@@ -1100,14 +1121,13 @@ ul .products-link-2::after {
 }
 
 .products-list {
-    padding: 0;
     margin: 0 auto;
-    padding-left: 35px;
+    padding: 0 0 0 35px
 }
 
 .products-list img {
     width: 360px;
-    height: 380px;
+    height: 380px
 }
 
 .products-list-block {
@@ -1132,23 +1152,6 @@ ul .products-link-2::after {
     margin-top: 25px;
     margin-bottom: 23px;
     position: relative
-}
-
-.mark-new::before {
-    content: "NEW";
-    text-align: center;
-    padding-top: 16px;
-    position: absolute;
-    height: 60px;
-    width: 60px;
-    border: 2px solid #d7d7d7;
-    border-radius: 50%;
-    color: #bfbfbf;
-    font-size: 14px;
-    letter-spacing: .7px;
-    top: 28px;
-    right: 27px;
-    z-index: 1
 }
 
 .range-filter {
@@ -1542,7 +1545,7 @@ ul .products-link-2::after {
     padding: 95px 100px;
     display: none;
     margin-left: 16%;
-    z-index: 100;
+    z-index: 100
 }
 
 .contacts-window input,

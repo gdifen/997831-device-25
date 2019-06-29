@@ -1,22 +1,22 @@
 @font-face {
     font-family: "Gilroy";
-    src: url("../fonts/gilroy-800-normal.woff2") format("woff2"), url("../fonts/gilroy-800-normal.woff") format("woff");
+    src: url(../fonts/gilroy-800-normal.woff2) format("woff2"), url(../fonts/gilroy-800-normal.woff) format("woff");
     font-weight: 800;
-    font-style: normal;
+    font-style: normal
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: url("../fonts/opensans-300-normal.woff2") format("woff2"), url("../fonts/opensans-300-normal.woff") format("woff");
+    src: url(../fonts/opensans-300-normal.woff2) format("woff2"), url(../fonts/opensans-300-normal.woff) format("woff");
     font-weight: 300;
-    font-style: normal;
+    font-style: normal
 }
 
 @font-face {
     font-family: "Gilroy";
-    src: url("../fonts/gilroy-300-normal.woff2") format("woff2"), url("../fonts/gilroy-300-normal.woff") format("woff");
+    src: url(../fonts/gilroy-300-normal.woff2) format("woff2"), url(../fonts/gilroy-300-normal.woff) format("woff");
     font-weight: 300;
-    font-style: normal;
+    font-style: normal
 }
 
 body {
@@ -26,13 +26,12 @@ body {
     font-size: 15px;
     line-height: 24px;
     font-weight: 300;
-    color: #464646;
-    list-style: none;
+    color: #464646
 }
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: #000
 }
 
 .visually-hidden {
@@ -43,98 +42,90 @@ a {
     overflow: hidden;
     border: 0;
     padding: 0;
-    clip-path: inset(50%);
+    clip-path: inset(50%)
 }
 
 *,
-*::before,
-*::after {
-    box-sizing: inherit;
+::after,
+::before {
+    box-sizing: inherit
 }
 
 html {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
-
-/*  HEADER  */
-
-.main-header ul {
-    list-style: none;
+.main-content ul,
+.main-header ul,
+body {
+    list-style: none
 }
 
 .header-logo {
+    width: 163px;
+    height: 35px;
     position: absolute;
-    top: 23px;
+    top: 23px
 }
 
-.header-block-1 {
-    box-sizing: border-box;
-    background-color: #f7e296;
-    width: 1160px;
-    margin: 0 auto;
-    margin-top: 40px;
-    padding: 35px 60px;
-    min-height: 186px;
-    display: flex;
-    flex-direction: column;
-}
-
+.header-block-1,
 .main-header-block {
     box-sizing: border-box;
     background-color: #f7e296;
     width: 1160px;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin: 40px auto 0;
     padding: 35px 60px;
-    min-height: 300px;
+    min-height: 186px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column
+}
+
+.main-header-block {
+    min-height: 300px
 }
 
 .header-operations {
     padding: 0;
-    margin: 0;
     display: flex;
-    margin-bottom: 15px;
-    align-items: center;
+    margin: 0 0 15px;
+    align-items: center
 }
 
 .header-operations .header-login {
     display: flex;
-    margin-right: auto;
+    margin-right: auto
 }
 
 .header-login .exit {
     margin-left: 20px;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, .3)
 }
 
 .header-operations .header-compare {
     margin-left: 85px;
-    margin-right: 65px;
+    margin-right: 65px
 }
 
 .search input {
     padding: 14px;
     background-color: #f7e296;
-    color: rgba(0, 0, 0, 0.3);
-    border: none;
-    width: 100%;
+    color: rgba(0, 0, 0, .3);
+    border: 0;
+    width: 100%
 }
 
 .search form {
-    display: flex;
+    display: flex
 }
 
 .search {
     width: 440px;
-    color: #000000;
+    color: #000;
     order: -4;
     position: relative;
     margin-right: 129px;
     padding-left: 25px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-bottom: 2px solid transparent
 }
 
 .search button {
@@ -142,28 +133,28 @@ html {
     margin-bottom: -2px;
     padding: 12px;
     background-color: #f7e296;
-    border: 2px solid #000000;
+    border: 2px solid #000
 }
 
 .search:focus-within {
-    border-bottom: 2px solid rgba(0, 0, 0, 1);
+    border-bottom: 2px solid #000
 }
 
 .search form:focus-within button {
-    display: block;
+    display: block
 }
 
 .search button:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff
 }
 
 .search input:focus {
-    outline: none;
+    outline: 0
 }
 
 .search button:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, .3)
 }
 
 .search::before {
@@ -174,63 +165,58 @@ html {
     height: 16px;
     position: absolute;
     margin-left: -23px;
-    margin-top: 15px;
+    margin-top: 15px
 }
 
+.header-basket a::before,
+.header-compare a::before,
 .login-link::before {
     content: "";
     position: absolute;
-    background-image: url(../img/user.svg);
     background-repeat: no-repeat;
     width: 12px;
-    height: 12px;
+    height: 12px
+}
+
+.login-link::before {
+    background-image: url(../img/user.svg);
     margin-left: -26px;
-    margin-top: 6px;
+    margin-top: 6px
 }
 
 .header-compare a::before {
-    content: "";
-    position: absolute;
     background-image: url(../img/compare.svg);
-    background-repeat: no-repeat;
-    width: 12px;
-    height: 12px;
     margin-left: -20px;
-    margin-top: 7px;
+    margin-top: 7px
 }
 
 .header-basket a::before {
-    content: "";
-    position: absolute;
     background-image: url(../img/cart.svg);
-    background-repeat: no-repeat;
-    width: 12px;
-    height: 12px;
     margin-left: -22px;
-    margin-top: 6px;
+    margin-top: 6px
 }
 
 .navigation-list {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .header-catalog {
     position: relative;
-    margin-right: auto;
+    margin-right: auto
 }
 
-.header-catalog::before,
-.header-catalog::after {
+.header-catalog::after,
+.header-catalog::before {
     content: "";
     position: absolute;
     background-color: #b8a974;
     width: 2px;
     height: 16px;
     left: 238px;
-    top: 2px;
+    top: 2px
 }
 
 .header-catalog::before {
@@ -242,11 +228,10 @@ html {
     flex-direction: column;
     margin-right: 55px;
     line-height: 36px;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .header-catalog-list {
-    margin: 0 auto;
     padding-left: 60px;
     display: flex;
     flex-wrap: wrap;
@@ -256,13 +241,13 @@ html {
     min-height: 150px;
     width: 1160px;
     top: 190px;
-    margin-left: -60px;
-    display: none;
+    margin: 0 auto 0 -60px;
+    display: none
 }
 
 .navigation-list li:nth-child(2) {
     margin-left: 35px;
-    margin-right: 105px;
+    margin-right: 105px
 }
 
 .header-conteiner {
@@ -273,50 +258,53 @@ html {
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 3.6px;
-    margin-top: 15px;
+    margin-top: 15px
 }
 
+.button-delivery:active .service-delivery,
 .header-catalog:hover {
-    display: block;
+    display: block
 }
 
+.header-catalog:hover,
 .header-logo:hover,
 .header-operations a:hover,
-.navigation-list li:hover,
-.header-catalog:hover {
-    opacity: 0.6;
+.navigation-list li:hover {
+    opacity: .6
 }
 
+.header-catalog:active,
 .header-logo:active,
 .header-operations a:active,
-.navigation-list li:active,
-.header-catalog:active {
-    opacity: 0.3;
+.navigation-list li:active {
+    opacity: .3
 }
 
 .header-block-2 {
-    padding-left: 200px;
+    padding-left: 60px;
     padding-top: 18px;
+    width: 1160px;
+    margin: 0 auto
 }
 
 .page-title {
     font-family: "Gilroy";
     font-size: 47px;
-    letter-spacing: 0.47px;
-    color: #000000;
-    margin-left: 40px;
+    letter-spacing: .47px;
+    color: #000
 }
 
 .breadcrumbs {
+    padding: 0;
     margin-top: 35px;
     display: flex;
-    margin-bottom: 47px;
+    margin-bottom: 47px
 }
 
 .breadcrumbs a {
-    opacity: 0.3;
-    letter-spacing: 0.14;
-    font-size: 14px;
+    opacity: .3;
+    letter-spacing: .14;
+    font-size: 14px
 }
 
 .breadcrumbs li:not(:last-child)::after {
@@ -325,48 +313,64 @@ html {
     background-image: url(../img/nav-arrow.svg);
     height: 7px;
     width: 4px;
-    margin: 0 17px;
+    margin: 0 17px
 }
 
-.breadcrumbs a:hover {
-    opacity: 0.6;
+.bluetooth+label:hover,
+.breadcrumbs a:hover,
+.color+label:hover {
+    opacity: .6
 }
 
 .breadcrumbs a:active {
-    opacity: 0.1;
+    opacity: .1
 }
 
-
-/*  MAIN INDEX */
-
-.main-content ul {
-    list-style: none;
+.index-catalog,
+.popular-description {
+    position: relative;
+    display: flex;
+    flex-direction: column
 }
 
 .index-catalog {
-    display: flex;
-    flex-direction: column;
-    width: 1160px;
-    margin: 0 auto;
     box-sizing: border-box;
-    margin-bottom: 165px;
-    position: relative;
+    margin: 0 auto 165px;
+    width: 1160px
 }
 
 .popular img {
+    display: block;
+    position: relative
+}
+
+.product-1 img {
     width: 384px;
     height: 486px;
-    display: block;
-    margin-right: 125px;
-    position: relative;
     margin-top: -112px;
+    margin-right: 125px
+}
+
+.product-2 img {
+    height: 485px;
+    width: 345px;
+    margin-top: -70px;
+    margin-right: 200px
+}
+
+.product-3 img {
+    width: 526px;
+    height: 334px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: -30px
 }
 
 .index-catalog article {
     position: relative;
     display: flex;
     min-height: 485px;
-    padding-left: 90px;
+    padding-left: 90px
 }
 
 .popular::before {
@@ -374,22 +378,22 @@ html {
     font-family: "Gilroy";
     font-size: 179px;
     font-weight: 800;
-    color: #ffffff;
+    color: #fff;
     letter-spacing: 1.8px;
     right: 47px;
-    top: -50px;
+    top: -50px
 }
 
 .product-1::before {
-    content: "01";
+    content: "01"
 }
 
 .product-2::before {
-    content: "02";
+    content: "02"
 }
 
 .product-3::before {
-    content: "03";
+    content: "03"
 }
 
 .popular::after {
@@ -397,21 +401,18 @@ html {
     position: absolute;
     width: 100px;
     height: 7px;
-    background-color: #ffffff;
+    background-color: #fff;
     right: 460px;
-    top: -75px;
+    top: -75px
 }
 
 .popular-description {
-    position: relative;
-    display: flex;
-    flex-direction: column;
     width: 480px;
-    padding-top: 83px;
+    padding-top: 83px
 }
 
 .popular-description:nth-child(2) {
-    line-height: 30px;
+    line-height: 30px
 }
 
 .popular-slogan {
@@ -420,9 +421,17 @@ html {
     font-family: "Gilroy";
     font-size: 47px;
     font-weight: 800;
-    letter-spacing: 0.47px;
+    letter-spacing: .47px;
     line-height: 56px;
-    color: #000000;
+    color: #000
+}
+
+.products-2 .popular-slogan {
+    width: 258px
+}
+
+.product-3 .popular-slogan {
+    width: 500px
 }
 
 .popular-description a {
@@ -437,7 +446,7 @@ html {
     width: 220px;
     text-align: center;
     margin-top: 37px;
-    margin-bottom: 68px;
+    margin-bottom: 68px
 }
 
 .popular-description a::before {
@@ -448,18 +457,18 @@ html {
     background-color: #f0c52e;
     z-index: -1;
     top: 7px;
-    left: 0px;
+    left: 0
 }
 
 .specification__list {
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex
 }
 
 .specification__list li:nth-child(2) {
     margin-left: 79px;
-    margin-right: 76px;
+    margin-right: 76px
 }
 
 .specification__list p:first-child {
@@ -468,32 +477,32 @@ html {
     font-family: "Gilroy";
     font-size: 36px;
     font-weight: 300;
-    color: #000000;
-    letter-spacing: 0.4px;
+    color: #000;
+    letter-spacing: .4px
 }
 
 .specification__list p:last-child {
     font-size: 13px;
     line-height: 1.54;
-    letter-spacing: 0.1px;
-    margin-top: 17px;
+    letter-spacing: .1px;
+    margin-top: 17px
 }
 
 .popular.product-2,
-.popular.product-3 {
-    display: none;
+.popular.product-3,
+.radio-bar input {
+    display: none
 }
 
 .products-menu {
-    padding: 0;
     display: flex;
-    padding-top: 173px;
+    padding: 173px 0 0;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .products-menu li {
-    width: 160px;
+    width: 160px
 }
 
 .products-menu a {
@@ -502,40 +511,34 @@ html {
     font-size: 18px;
     font-weight: 800;
     line-height: 1.33px;
-    letter-spacing: 0.2px;
+    letter-spacing: .2px
 }
 
+.products-menu a::after,
 .products-menu a::before {
     content: " ";
     position: absolute;
+    background-repeat: no-repeat;
     width: 160px;
     height: 160px;
+    top: -195px
+}
+
+.products-menu a::before {
     background-color: #f0c52e;
-    background-repeat: no-repeat;
-    top: -195px;
-    opacity: 0.5;
+    opacity: .5
 }
 
 .products-menu a::after {
-    content: " ";
-    position: absolute;
-    background-repeat: no-repeat;
-    width: 160px;
-    height: 160px;
     background-position: center;
-    top: -195px;
-    left: 0;
+    left: 0
 }
 
 .radio-bar {
     position: absolute;
     top: 209px;
     right: 83px;
-    z-index: 1;
-}
-
-.radio-bar input {
-    display: none;
+    z-index: 1
 }
 
 .bar+label:before {
@@ -543,9 +546,9 @@ html {
     width: 12px;
     content: "";
     display: inline-block;
-    border: 1px solid #000000;
+    border: 1px solid #000;
     border-radius: 50%;
-    margin-left: 16px;
+    margin-left: 16px
 }
 
 .bar:checked+label:after {
@@ -555,72 +558,80 @@ html {
     content: "";
     height: 5px;
     width: 5px;
-    border: 1px solid #000000;
-    border-radius: 50%;
+    border: 1px solid #000;
+    border-radius: 50%
 }
 
 .products-link-1::after {
-    background-image: url(../img/popular-1.svg);
+    background-image: url(../img/popular-1.svg)
 }
 
 ul .products-link-2::after {
     background-image: url(../img/popular-2.svg);
-    top: -175px;
+    top: -175px
 }
 
 .products-link-3::after {
-    background-image: url(../img/popular-3.svg);
+    background-image: url(../img/popular-3.svg)
 }
 
 .products-link-4::after {
-    background-image: url(../img/popular-4.svg);
+    background-image: url(../img/popular-4.svg)
 }
 
 .products-link-5::after {
-    background-image: url(../img/popular-5.svg);
+    background-image: url(../img/popular-5.svg)
 }
 
 .products-link-6::after {
-    background-image: url(../img/popular-6.svg);
+    background-image: url(../img/popular-6.svg)
 }
 
+.bluetooth+label:active,
+.color+label:active,
 .products-menu a:hover::before {
-    opacity: 1;
+    opacity: 1
 }
 
-.products-menu a:active {
-    color: rgba(0, 0, 0, 0.3);
+.more:active,
+.popular-description a:active,
+.products-menu a:active,
+.send:active,
+.write-us:active {
+    color: rgba(0, 0, 0, .3)
 }
 
 .products-menu a:active::after {
-    opacity: 0.5;
+    opacity: .5
 }
 
 .company-products ul {
     margin-top: 95px;
     display: flex;
     position: relative;
-    right: 190px;
+    right: 190px
 }
 
 .company-products {
     width: 1160px;
-    margin: 0 auto;
-    margin-bottom: 217px;
+    margin: 0 auto 217px
 }
 
 .company-products li {
-    margin: 0 150px;
+    margin: 0 150px
 }
 
 .services {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
     width: 100%;
     background-color: #e5e5e5;
-    min-height: 288px;
-    padding-left: 140px;
+    min-height: 288px
+}
+
+.services-block {
+    width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    display: flex
 }
 
 .services-button button {
@@ -634,8 +645,8 @@ ul .products-link-2::after {
     text-transform: uppercase;
     margin-bottom: 40px;
     z-index: 1;
-    border: none;
-    background: none;
+    border: 0;
+    background: 0 0
 }
 
 .services-button button::before {
@@ -645,13 +656,15 @@ ul .products-link-2::after {
     height: 8px;
     background-color: #f0c52e;
     top: 7px;
-    left: 0px;
-    z-index: -1;
+    left: 0;
+    z-index: -1
 }
 
 .services-button {
+    margin: 0;
+    padding: 0;
     position: absolute;
-    top: -25px;
+    top: -9px
 }
 
 .services-list h2 {
@@ -660,42 +673,43 @@ ul .products-link-2::after {
     font-family: "Gilroy";
     font-size: 47px;
     font-weight: 800;
-    letter-spacing: 0.5px;
-    color: #000000;
+    letter-spacing: .5px;
+    color: #000
 }
 
 .services-list p {
     width: 425px;
     margin-top: 51px;
     line-height: 30px;
-    letter-spacing: 0.15px;
+    letter-spacing: .15px
 }
 
+.service-credit,
 .service-delivery,
-.service-guarantee,
-.service-credit {
-    position: relative;
+.service-guarantee {
+    position: relative
 }
 
-.service-guarantee,
-.service-credit {
-    display: none;
+.button-delivery:active .service-credit,
+.button-delivery:active .service-guarantee,
+.service-credit,
+.service-guarantee {
+    display: none
 }
 
 .services-list {
-    margin: 0;
     padding: 0;
-    margin-left: 440px;
+    margin: 0 0 0 400px
 }
 
-.services::before {
+.services-block::before {
     position: absolute;
     content: "";
     width: 7px;
     height: 319px;
-    background-color: #000000;
-    margin-left: 317px;
-    margin-top: -100px;
+    background-color: #000;
+    margin-left: 277px;
+    margin-top: -100px
 }
 
 .service-delivery::before {
@@ -706,108 +720,97 @@ ul .products-link-2::after {
     height: 164px;
     width: 136px;
     top: -65px;
-    right: -270px;
+    right: -270px
 }
 
 .service-guarantee::before {
-    content: "";
-    position: absolute;
     background-image: url(../img/warranty.svg);
-    background-repeat: no-repeat;
     height: 194px;
     width: 171px;
     top: -90px;
-    right: -270px;
+    right: -190px
+}
+
+.company-logo::before,
+.service-credit::before,
+.service-guarantee::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat
 }
 
 .service-credit::before {
-    content: "";
-    position: absolute;
     background-image: url(../img/credit.svg);
-    background-repeat: no-repeat;
-    height: 186px;
-    width: 156px;
     top: -90px;
-    right: -270px;
+    right: -190px;
+    height: 186px;
+    width: 156px
 }
 
 .services-button button:hover::before {
-    transform: scaley(5);
+    transform: scaley(5)
 }
 
 .services-button button:active::before {
     width: 278px;
-    background-color: #000000;
+    background-color: #000
 }
 
 .services-button button:active {
-    color: #f7e184;
-}
-
-.button-delivery:active .service-delivery {
-    display: block;
-}
-
-.button-delivery:active .service-guarantee,
-.button-delivery:active .service-credit {
-    display: none;
+    color: #f7e184
 }
 
 .button-guarantee:active .service-guarantee {
-    display: block;
+    display: block
 }
 
-.button-guarantee:active .service-delivery,
-.button-guarantee:active .service-credit {
-    display: none;
+.button-guarantee:active .service-credit,
+.button-guarantee:active .service-delivery {
+    display: none
 }
 
 .button-credit:active .service-credit {
-    display: block;
+    display: block
 }
 
 .button-credit:active .service-delivery,
 .button-credit:active .service-guarantee {
-    display: none;
+    display: none
 }
 
 .company-logo::before {
-    position: absolute;
-    content: "";
-    background-repeat: no-repeat;
     width: 260px;
     height: 100px;
     filter: grayscale(100%);
-    opacity: 0.2;
+    opacity: .2
 }
 
 .logo-1::before {
-    background-image: url(../img/dji-logo.png);
+    background-image: url(../img/dji-logo.png)
 }
 
 .logo-2::before {
-    background-image: url(../img/sp-gadgets-logo.png);
+    background-image: url(../img/sp-gadgets-logo.png)
 }
 
 .logo-3::before {
-    background-image: url(../img/gopro-logo.png);
+    background-image: url(../img/gopro-logo.png)
 }
 
 .logo-4::before {
-    background-image: url(../img/vive-logo.png);
+    background-image: url(../img/vive-logo.png)
 }
 
 .company-logo:focus::before,
 .company-logo:hover::before {
     filter: grayscale(0);
-    opacity: 1;
+    opacity: 1
 }
 
 .add-info {
     display: flex;
     width: 1160px;
-    margin: 0 auto;
-    margin-bottom: 88px;
+    margin: 0 auto 88px
 }
 
 .add-info h2 {
@@ -815,30 +818,32 @@ ul .products-link-2::after {
     font-weight: 800;
     font-size: 47px;
     margin-bottom: 56px;
-    color: #000000;
-    letter-spacing: 0.47px;
+    color: #000;
+    letter-spacing: .47px
 }
 
 .we {
     width: 470px;
-    margin-right: auto;
+    margin-right: auto
 }
 
 .delivery-companies {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 35px;
-    margin-top: 65px;
-    margin-bottom: 64px;
+    padding: 0;
+    margin: 65px 0 64px 35px
+}
+
+.delivery-companies li,
+.filters h2,
+.sorting h2 {
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-weight: 800;
+    color: #000
 }
 
 .delivery-companies li {
     position: relative;
-    font-family: "Gilroy";
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 40px;
-    color: #000000;
+    line-height: 40px
 }
 
 .delivery-companies li::before {
@@ -849,43 +854,41 @@ ul .products-link-2::after {
     border: 2px solid #e6e6e6;
     border-radius: 50%;
     top: 16px;
-    left: -35px;
+    left: -35px
 }
 
 .contacts {
-    width: 560px;
+    width: 560px
 }
 
 .contacts-map {
     display: block;
     margin-bottom: 72px;
-}
-
-.contacts-map iframe {
     width: 560px;
     height: 222px;
+    border: 0
 }
 
 .add-info p {
-    line-height: 30px;
+    line-height: 30px
 }
 
 .contacts p {
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .we-paragraph-1 {
-    margin-bottom: 32px;
+    margin-bottom: 32px
 }
 
-.we::before,
-.contacts::before {
+.contacts::before,
+.we::before {
     position: absolute;
     content: "";
     width: 80px;
     height: 7px;
-    background-color: #000000;
-    margin-top: -25px;
+    background-color: #000;
+    margin-top: -25px
 }
 
 .more,
@@ -899,11 +902,11 @@ ul .products-link-2::after {
     line-height: 24px;
     display: block;
     width: 260px;
-    text-align: center;
+    text-align: center
 }
 
-.write-us::before,
-.more::before {
+.more::before,
+.write-us::before {
     content: "";
     position: absolute;
     width: 260px;
@@ -911,52 +914,43 @@ ul .products-link-2::after {
     background-color: #f0c52e;
     z-index: -1;
     top: 7px;
-    left: 0px;
+    left: 0
 }
 
-.write-us:hover::before,
 .more:hover::before,
+.popular-description a:hover::before,
 .send:hover::before,
-.popular-description a:hover::before {
-    transform: scaley(5);
+.write-us:hover::before {
+    transform: scaley(5)
 }
 
-.more:active,
-.write-us:active,
-.send:active,
-.popular-description a:active {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-
-/*  MAIN CATALOG */
-
-.catalog {
-    display: flex;
+.catalog,
+.products-list article:hover .pop-up,
+.sorting,
+.sorting ul {
+    display: flex
 }
 
 .sorting {
-    display: flex;
     background-color: #ebebeb;
-    padding-left: 75px;
-    margin-bottom: 45px;
+    padding-left: 79px;
+    margin-bottom: 45px
 }
 
 .sorting ul {
-    display: flex;
     align-items: center;
-    margin-left: 12px;
+    margin-left: 12px
 }
 
 .sorting-list a {
     font-family: "Open Sans";
     font-size: 14px;
     margin-right: 31px;
-    opacity: 0.3;
+    opacity: .3
 }
 
 .arrows {
-    margin-left: 205px;
+    margin-left: 205px
 }
 
 .arrow::before {
@@ -967,11 +961,11 @@ ul .products-link-2::after {
     width: 11px;
     margin-top: 30px;
     margin-right: 15px;
-    opacity: 0.3;
+    opacity: .3
 }
 
 .up::before {
-    background-image: url(../img/icon-up.svg);
+    background-image: url(../img/icon-up.svg)
 }
 
 .down::before {
@@ -980,81 +974,80 @@ ul .products-link-2::after {
 
 .filters {
     background-color: #ebebeb;
-    width: 508px;
+    width: 54%
 }
 
 .filters h2,
 .sorting h2 {
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-weight: 800;
-    color: #000000;
     letter-spacing: 3.2px;
     text-transform: uppercase;
     padding: 10px 0;
-    text-align: center;
+    text-align: center
 }
 
 .filters .filters-title {
-    margin: 0;
-    padding: 23px 0;
     background-color: #d9d9d9;
-    padding-left: 62px;
+    padding: 23px 0 23px 25px;
+    margin: 0 0 0 auto
 }
 
 .filters form {
+    width: 200px;
     padding-top: 51px;
-    padding-left: 239px;
-    padding-right: 100px;
+    margin-left: auto;
+    margin-right: 67px
 }
 
 .filters ul {
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
 .filters li {
     margin-bottom: 16px;
-    margin-left: 30px;
+    margin-left: 30px
 }
 
 .filters-color li:last-child {
-    margin-bottom: 7px;
+    margin-bottom: 7px
 }
 
 .filters fieldset {
-    margin: 0;
     padding: 0;
-    border: none;
-    margin-bottom: 15px;
+    border: 0;
+    margin: 0 0 15px
 }
 
 .filters label {
     margin-left: 10px;
-    vertical-align: top;
+    vertical-align: top
+}
+
+.filters h3,
+.pop-up .pop-up-link-1 {
+    font-size: 18px;
+    font-weight: 800;
+    width: 200px
 }
 
 .filters h3 {
-    width: 200px;
-    border-top: 2px solid #000000;
-    font-family: "gilroy";
-    font-weight: 800;
-    color: #000000;
-    font-size: 18px;
+    border-top: 2px solid #000;
+    color: #000;
     padding-top: 10px;
-    margin-bottom: 25px;
+    font-family: "gilroy";
+    margin-bottom: 25px
 }
 
 .products ul {
     display: flex;
     box-sizing: border-box;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .products article {
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: relative
 }
 
 .pop-up {
@@ -1063,19 +1056,16 @@ ul .products-link-2::after {
     flex-direction: column;
     align-items: center;
     margin-left: 80px;
-    bottom: 47%;
+    bottom: 47%
 }
 
 .pop-up .pop-up-link-1 {
     font-family: "Gilroy";
-    font-size: 18px;
-    font-weight: 800;
     letter-spacing: 3.6px;
     text-transform: uppercase;
-    width: 200px;
     text-align: center;
     z-index: 1;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .pop-up-link-1::before {
@@ -1086,56 +1076,22 @@ ul .products-link-2::after {
     background-color: #f0c52e;
     top: 7px;
     left: 0;
-    z-index: -1;
+    z-index: -1
 }
 
 .pop-up .pop-up-link-2 {
-    opacity: 0.5;
+    opacity: .5;
     font-family: "Open Sans";
     font-size: 13px;
     font-weight: 300;
-    letter-spacing: 0.13px;
-    z-index: 1;
+    letter-spacing: .13px;
+    z-index: 1
 }
 
+.mark-new::before,
 .products-list a {
     font-family: "gilroy";
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 0.18px;
-}
-
-.wrap-link {
-    width: 180px;
-}
-
-.products-list {
-    margin: 0;
-    padding-left: 70px;
-}
-
-.products-list-block {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.price {
-    color: #464646;
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.16px;
-    width: 100px;
-    text-align: right;
-}
-
-.products-list li {
-    width: 360px;
-    margin-bottom: 23px;
-    margin-top: 25px;
-    margin-right: 40px;
-    position: relative;
+    font-weight: 800
 }
 
 .mark-new::before {
@@ -1147,36 +1103,77 @@ ul .products-link-2::after {
     width: 60px;
     border: 2px solid #d7d7d7;
     border-radius: 50%;
-    font-family: "gilroy";
-    font-weight: 800;
     color: #bfbfbf;
-    font-size: 14px;
-    letter-spacing: 0.7px;
     top: 28px;
     right: 27px;
     z-index: 1;
+    font-size: 14px;
+    letter-spacing: .7px
+}
+
+.products-list a {
+    font-size: 18px;
+    letter-spacing: .18px
+}
+
+.wrap-link {
+    width: 180px
+}
+
+.products-list {
+    margin: 0 auto;
+    padding: 0 0 0 35px
+}
+
+.products-list img {
+    width: 360px;
+    height: 380px
+}
+
+.products-list-block {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between
+}
+
+.price {
+    color: #464646;
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: .16px;
+    width: 100px;
+    text-align: right
+}
+
+.products-list li {
+    width: 360px;
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 23px;
+    position: relative
 }
 
 .range-filter {
-    width: 200px;
+    width: 200px
 }
 
 .range-controls {
     margin-top: 35px;
     position: relative;
-    margin-left: -3px;
+    margin-left: -3px
 }
 
 .range-controls .scale {
     height: 2px;
     background: #d7dcde;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .range-controls .bar {
     height: 2px;
     width: 120px;
-    background: #91c92f;
+    background: #91c92f
 }
 
 .range-controls .toggle {
@@ -1186,18 +1183,18 @@ ul .products-link-2::after {
     width: 5px;
     height: 5px;
     background-color: #d9d9d9;
-    border: 8px solid #ffffff;
+    border: 8px solid #fff;
     border-radius: 50%;
     box-shadow: 0 2px 1px 0 #cfcfcf;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .range-controls .toggle-min {
-    left: 0;
+    left: 0
 }
 
 .range-controls .toggle-max {
-    left: 110px;
+    left: 110px
 }
 
 .price-controls,
@@ -1205,26 +1202,29 @@ ul .products-link-2::after {
     font-family: "Gilroy";
     font-size: 14px;
     font-weight: 300;
-    color: rgba(0, 0, 0, 0.2);
-    margin-left: -10px;
+    color: rgba(0, 0, 0, .2)
+}
+
+.price-controls {
+    margin-left: -10px
 }
 
 .price-controls input {
     width: 60px;
     padding: 0;
     margin: 0;
-    background: none;
-    border: none;
+    background: 0 0;
+    border: 0
 }
 
 .max-price {
-    text-align: right;
+    text-align: right
 }
 
-.filters-color input,
-.filters-bluetooth input {
+.filters-bluetooth input,
+.filters-color input {
     display: none;
-    position: relative;
+    position: relative
 }
 
 .color+label::before {
@@ -1233,7 +1233,7 @@ ul .products-link-2::after {
     background-image: url(../img/checkbox-off.svg);
     width: 23px;
     height: 23px;
-    margin-left: -40px;
+    margin-left: -40px
 }
 
 .color:checked+label::before {
@@ -1241,7 +1241,7 @@ ul .products-link-2::after {
     position: absolute;
     background-image: url(../img/checkbox-on.svg);
     width: 27px;
-    height: 23px;
+    height: 23px
 }
 
 .bluetooth+label::before {
@@ -1250,7 +1250,7 @@ ul .products-link-2::after {
     background-image: url(../img/radio-off.svg);
     width: 25px;
     height: 25px;
-    margin-left: -40px;
+    margin-left: -40px
 }
 
 .bluetooth:checked+label::before {
@@ -1258,22 +1258,26 @@ ul .products-link-2::after {
     position: absolute;
     background-image: url(../img/radio-on.svg);
     width: 25px;
-    height: 25px;
+    height: 25px
+}
+
+.filters button,
+.pagination a {
+    font-weight: 800;
+    text-transform: uppercase
 }
 
 .filters button {
-    border: none;
-    background: none;
-    font-family: "Gilroy";
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 3.6px;
+    border: 0;
+    background: 0 0;
     text-align: center;
-    text-transform: uppercase;
     width: 200px;
     margin-top: 20px;
     position: relative;
     z-index: 1;
+    font-family: "Gilroy";
+    font-size: 18px;
+    letter-spacing: 3.6px
 }
 
 .filters button::before {
@@ -1284,7 +1288,7 @@ ul .products-link-2::after {
     background-color: #f0c52e;
     left: 0;
     z-index: -1;
-    top: 6px;
+    top: 6px
 }
 
 .pagination {
@@ -1294,143 +1298,114 @@ ul .products-link-2::after {
     background-color: #ebebeb;
     align-items: center;
     padding: 0;
-    margin-left: 70px;
+    margin-left: 75px;
     margin-top: 12px;
-    margin-bottom: 77px;
+    margin-bottom: 77px
 }
 
 .pagination a {
     font-family: Gilroy;
     font-size: 16px;
-    font-weight: 800;
     line-height: 1.5;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
+    letter-spacing: 3.2px
 }
 
 .pagination-link {
-    padding: 23px 30px;
+    padding: 23px 30px
 }
 
 .pagination ul {
     margin: 0;
-    padding: 0;
-    padding-left: 18px;
+    padding: 0 0 0 18px
 }
 
 .pagination li {
     margin: 0 15px;
-    opacity: 0.3;
+    opacity: .3
 }
 
 .range-filter .toggle:active {
-    border: 9px solid #ffffff;
+    border: 9px solid #fff
 }
 
-.color+label:hover,
-.bluetooth+label:hover {
-    opacity: 0.6;
-}
-
-.color+label:active,
-.bluetooth+label:active {
-    opacity: 1;
-}
-
-.color+label:disabled,
-.bluetooth+label:disabled {
-    opacity: 0.25;
+.bluetooth+label:disabled,
+.color+label:disabled {
+    opacity: .25
 }
 
 .catalog .current,
 .down::before {
-    opacity: 1;
+    opacity: 1
 }
 
-.pagination-link:hover,
 .pagination-link:hover {
-    background-color: #d9d9d9;
+    background-color: #d9d9d9
 }
 
-.pagination-link:active,
 .pagination-link:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, .3)
 }
 
+.arrow:hover::before,
 .pagination li:hover,
-.sorting-list a:hover,
-.arrow:hover::before {
-    opacity: 0.6;
+.sorting-list a:hover {
+    opacity: .6
 }
 
+.arrow:active::before,
 .pagination li:active,
-.sorting-list a:active,
-.arrow:active::before {
-    opacity: 1;
+.pop-up-link-2:hover,
+.sorting-list a:active {
+    opacity: 1
 }
 
-.pop-up-link-2:hover {
-    opacity: 1;
-}
-
-.pop-up-link-2:active {
-    opacity: 0.3;
+.pop-up-link-2:active,
+.products-list article:hover img {
+    opacity: .3
 }
 
 .filters button:hover::before,
 .pop-up-link-1:hover::before {
-    transform: scaley(5);
+    transform: scaley(5)
 }
 
 .filters button:active,
 .pop-up-link-1:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, .3)
 }
-
-.products-list article:hover img {
-    opacity: 0.3;
-}
-
-.products-list article:hover .pop-up {
-    display: flex;
-}
-
-
-/*  FOOTER  */
 
 .main-footer ul {
-    list-style: none;
+    list-style: none
 }
 
 .main-footer {
     padding: 0;
     margin: 0;
     background-color: #464646;
-    color: #ffffff;
+    color: #fff;
     width: 100%;
     min-height: 325px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .main-footer a {
-    color: #ffffff;
+    color: #fff
 }
 
 .footer-container__line-1 {
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 12px
 }
 
 .footer-container__list {
     padding: 0;
-    margin: 0;
-    margin-left: auto;
+    margin: 0 0 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .footer-container__list li {
-    margin-left: 42px;
+    margin-left: 42px
 }
 
 .footer-container {
@@ -1438,81 +1413,78 @@ ul .products-link-2::after {
     width: 1160px;
     padding-top: 65px;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .footer-container__line-2 {
     display: flex;
-    margin-bottom: 45px;
+    margin-bottom: 45px
 }
 
 .footer-navigation {
     font-family: "Gilroy";
     font-weight: 800;
     font-size: 18px;
-    color: #ffffff;
+    color: #fff;
     text-transform: uppercase;
     flex-wrap: wrap;
     letter-spacing: 3.6px;
     margin-left: 105px;
-    margin-right: auto;
+    margin-right: auto
 }
 
+.footer-container__list a,
 .footer-navigation-list {
-    display: flex;
+    display: flex
 }
 
 .footer-navigation-list li {
-    margin: 0 17px;
+    margin: 0 17px
 }
 
 .address {
-    order: -3;
+    order: -3
 }
 
 .footer-container__line-3 {
     display: flex;
-    position: relative;
+    position: relative
+}
+
+.decoration-line-2,
+.footer-container__line-3::before {
+    position: absolute;
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600
 }
 
 .footer-container__line-3::before {
     content: "";
-    position: absolute;
-    background-color: #ffc600;
-    width: 80px;
-    height: 7px;
-    margin-top: 12px;
+    margin-top: 12px
 }
 
 .social {
     display: flex;
     margin: auto;
-    position: relative;
+    position: relative
 }
 
 .decoration-line-2 {
-    position: absolute;
-    width: 80px;
-    height: 7px;
-    background-color: #ffc600;
-    top: 13px;
-}
-
-.footer-container__list a {
-    display: flex;
+    top: 13px
 }
 
 .footer-container__list li:first-child {
-    display: flex;
+    display: flex
 }
 
 .footer-container__list .exit {
     margin-left: 20px;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, .3)
 }
 
 .icon {
-    margin-right: 11px;
+    margin-right: 11px
 }
 
 .social-icon::before {
@@ -1521,49 +1493,47 @@ ul .products-link-2::after {
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
-    opacity: 0.3;
-    bottom: -12px;
+    opacity: .3;
+    bottom: -12px
 }
 
 .Facebook::before {
     background-image: url(../img/facebook.svg);
-    margin-left: -78px;
+    margin-left: -78px
 }
 
 .Instagram::before {
     position: absolute;
     content: "";
     background-image: url(../img/insta.svg);
-    margin-left: -22px;
+    margin-left: -22px
 }
 
 .Twitter::before {
     background-image: url(../img/twit.svg);
-    margin-left: 32px;
+    margin-left: 32px
 }
 
-.footer-logo:hover,
 .footer-container__list a:hover,
+.footer-logo:hover,
 .footer-navigation-list li:hover,
+.html-academy:hover,
 .social-icon:focus,
-.social-icon:hover,
-.html-academy:hover {
-    opacity: 0.6;
+.social-icon:hover {
+    opacity: .6
 }
 
-.footer-logo:active,
 .footer-container__list a:active,
+.footer-logo:active,
 .footer-navigation-list li:active,
-.social-icon:active,
-.html-academy:active {
-    opacity: 0.3;
+.html-academy:active,
+.social-icon:active {
+    opacity: .3
 }
-
-
-/*  contacts-window   */
 
 .contacts-window {
-    display: none;
+    background-color: #fff;
+    top: 50px;
     position: fixed;
     box-sizing: border-box;
     font-family: "Gilroy";
@@ -1571,34 +1541,36 @@ ul .products-link-2::after {
     font-size: 18px;
     width: 960px;
     min-height: 553px;
-    box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
-    margin: 0 auto;
+    box-shadow: 0 10px 20px 0 rgba(4, 6, 6, .2);
     padding: 95px 100px;
+    display: none;
+    margin-left: 16%;
+    z-index: 100
 }
 
 .contacts-window input,
 .contacts-window textarea {
     margin-top: 13px;
     background-color: #f2f2f2;
-    border: none;
-    padding: 20px 20px;
-    width: 360px;
+    border: 0;
+    padding: 20px;
+    width: 360px
 }
 
 .contacts-window form {
     font-size: 14px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .name {
-    margin-right: auto;
+    margin-right: auto
 }
 
 .letter textarea {
     width: 760px;
-    min-height: 155px;
+    min-height: 155px
 }
 
 .close {
@@ -1609,35 +1581,35 @@ ul .products-link-2::after {
     width: 54px;
     height: 54px;
     border-radius: 50%;
-    border: none;
-    opacity: 0.5;
+    border: 0;
+    opacity: .5
 }
 
 .close:hover {
-    opacity: 1;
+    opacity: 1
 }
 
 .close:active {
-    opacity: 0.3;
+    opacity: .3
 }
 
-.close:before,
-.close:after {
+.close:after,
+.close:before {
     position: absolute;
     top: 12px;
     right: 26px;
     content: """";
     height: 30px;
     width: 2px;
-    background-color: #e5e5e5;
+    background-color: #e5e5e5
 }
 
 .close:before {
-    transform: rotate(45deg);
+    transform: rotate(45deg)
 }
 
 .close:after {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg)
 }
 
 .send {
@@ -1647,11 +1619,11 @@ ul .products-link-2::after {
     letter-spacing: 3.6px;
     text-transform: uppercase;
     position: relative;
-    border: none;
-    background: none;
+    border: 0;
+    background: 0 0;
     margin-top: 55px;
     width: 200px;
-    text-align: center;
+    text-align: center
 }
 
 .send::before {
@@ -1662,28 +1634,28 @@ ul .products-link-2::after {
     background-color: #f0c52e;
     z-index: -1;
     top: 6px;
-    left: 0px;
+    left: 0
 }
 
 .contacts-window p {
-    color: #1a1212;
+    color: #1a1212
 }
 
 .contacts-window input:hover,
 .contacts-window textarea:hover {
-    background-color: #eaeaea;
+    background-color: #eaeaea
 }
 
 .contacts-window input:invalid {
-    background-color: #f6dada;
+    background-color: #f6dada
 }
 
 .contacts-window input:focus,
 .contacts-window textarea:focus {
-    background-color: #ffffff;
-    outline: #f7e184 solid 3px;
+    background-color: #fff;
+    outline: #f7e184 solid 3px
 }
 
 .wow-pop-up {
-    display: block;
+    display: block
 }
