@@ -277,8 +277,10 @@ body {
 }
 
 .header-block-2 {
-    padding-left: 200px;
-    padding-top: 18px
+    padding-left: 60px;
+    padding-top: 18px;
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .page-title {
@@ -286,10 +288,10 @@ body {
     font-size: 47px;
     letter-spacing: .47px;
     color: #000;
-    margin-left: 40px
 }
 
 .breadcrumbs {
+    padding: 0;
     margin-top: 35px;
     display: flex;
     margin-bottom: 47px
@@ -590,13 +592,16 @@ ul .products-link-2::after {
 }
 
 .services {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
     width: 100%;
     background-color: #e5e5e5;
     min-height: 288px;
-    padding-left: 140px
+}
+
+.services-block {
+    width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
 }
 
 .services-button button {
@@ -626,8 +631,10 @@ ul .products-link-2::after {
 }
 
 .services-button {
+    margin: 0;
+    padding: 0;
     position: absolute;
-    top: -25px
+    top: -9px;
 }
 
 .services-list h2 {
@@ -662,16 +669,16 @@ ul .products-link-2::after {
 
 .services-list {
     padding: 0;
-    margin: 0 0 0 440px
+    margin: 0 0 0 400px
 }
 
-.services::before {
+.services-block::before {
     position: absolute;
     content: "";
     width: 7px;
     height: 319px;
     background-color: #000;
-    margin-left: 317px;
+    margin-left: 277px;
     margin-top: -100px
 }
 
@@ -691,7 +698,7 @@ ul .products-link-2::after {
     height: 194px;
     width: 171px;
     top: -90px;
-    right: -270px
+    right: -190px
 }
 
 .company-logo::before,
@@ -705,7 +712,7 @@ ul .products-link-2::after {
 .service-credit::before {
     background-image: url(../img/credit.svg);
     top: -90px;
-    right: -270px;
+    right: -190px;
     height: 186px;
     width: 156px
 }
@@ -898,8 +905,8 @@ ul .products-link-2::after {
 
 .sorting {
     background-color: #ebebeb;
-    padding-left: 75px;
-    margin-bottom: 45px
+    padding-left: 79px;
+    margin-bottom: 45px;
 }
 
 .sorting ul {
@@ -939,7 +946,7 @@ ul .products-link-2::after {
 
 .filters {
     background-color: #ebebeb;
-    width: 508px
+    width: 54%
 }
 
 .filters h2,
@@ -953,13 +960,15 @@ ul .products-link-2::after {
 .filters .filters-title {
     margin: 0;
     background-color: #d9d9d9;
-    padding: 23px 0 23px 62px
+    padding: 23px 0 23px 25px;
+    margin-left: auto;
 }
 
 .filters form {
+    width: 200px;
     padding-top: 51px;
-    padding-left: 239px;
-    padding-right: 100px
+    margin-left: auto;
+    margin-right: 67px;
 }
 
 .filters ul {
@@ -1065,8 +1074,9 @@ ul .products-link-2::after {
 }
 
 .products-list {
-    margin: 0;
-    padding-left: 70px
+    padding: 0;
+    margin: 0 auto;
+    padding-left: 35px;
 }
 
 .products-list-block {
@@ -1087,9 +1097,9 @@ ul .products-link-2::after {
 
 .products-list li {
     width: 360px;
-    margin-bottom: 23px;
+    margin-left: 40px;
     margin-top: 25px;
-    margin-right: 40px;
+    margin-bottom: 23px;
     position: relative
 }
 
@@ -1254,7 +1264,7 @@ ul .products-link-2::after {
     background-color: #ebebeb;
     align-items: center;
     padding: 0;
-    margin-left: 70px;
+    margin-left: 75px;
     margin-top: 12px;
     margin-bottom: 77px
 }
