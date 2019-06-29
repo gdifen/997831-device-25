@@ -1498,7 +1498,8 @@ ul .products-link-2::after {
 }
 
 .contacts-window {
-    display: none;
+    background-color: #fff;
+    top: 50px;
     position: fixed;
     box-sizing: border-box;
     font-family: "Gilroy";
@@ -1507,8 +1508,10 @@ ul .products-link-2::after {
     width: 960px;
     min-height: 553px;
     box-shadow: 0 10px 20px 0 rgba(4, 6, 6, .2);
-    margin: 0 auto;
-    padding: 95px 100px
+    padding: 95px 100px;
+    display: none;
+    margin-left: 16%;
+    z-index: 100;
 }
 
 .contacts-window input,
