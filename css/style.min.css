@@ -546,7 +546,9 @@ body {
 }
 
 .popular-description a,
-.popular-slogan {
+.popular-slogan,
+.services-button button,
+.services-list h2 {
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800
 }
@@ -659,7 +661,8 @@ body {
     height: 160px
 }
 
-.products-menu a::after {
+.products-menu a::after,
+.radio-bar {
     position: absolute;
     top: -195px
 }
@@ -675,7 +678,6 @@ body {
 }
 
 .radio-bar {
-    position: absolute;
     top: 548px;
     right: 223px;
     z-index: 1
@@ -792,12 +794,6 @@ ul .products-link-2::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
-}
-
-.services-button button,
-.services-list h2 {
-    font-family: "Gilroy", "Arial", sans-serif;
-    font-weight: 800
 }
 
 .services-button button {
@@ -1156,7 +1152,7 @@ ul .products-link-2::after {
 
 .filters {
     background-color: #ebebeb;
-    width: 54%
+    width: 55%
 }
 
 .filters h2,
@@ -1916,4 +1912,22 @@ ul .products-link-2::after {
 .modal-error {
     -webkit-animation: shake .8s;
     animation: shake .8s
+}
+
+@media (min-width:1440px) {
+    .filters {
+        width: 54%
+    }
+}
+
+@media (min-width:1600px) {
+    .filters {
+        width: 53%
+    }
+}
+
+@media (min-width:1920px) {
+    .filters {
+        width: 50%
+    }
 }

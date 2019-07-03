@@ -1,3 +1,87 @@
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px)
+    }
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px)
+    }
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+
+@keyframes shake {
+    0%,
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+
 @font-face {
     font-family: "Gilroy";
     src: url(../fonts/gilroy-800-normal.woff2) format("woff2"), url(../fonts/gilroy-800-normal.woff) format("woff");
@@ -95,9 +179,6 @@ body {
 
 .header-operations {
     padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin: 0 0 15px;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -129,6 +210,7 @@ body {
     width: 100%
 }
 
+.header-operations,
 .search form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -261,16 +343,16 @@ body {
     width: 1160px;
     top: 190px;
     margin: 0 auto 0 -60px;
-    display: none;
+    display: none
 }
 
 .header-catalog-list {
     padding: 0;
-    margin-right: 70px;
+    margin-right: 70px
 }
 
 .header-catalog-list li {
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .navigation-list li:nth-child(2) {
@@ -396,7 +478,7 @@ body {
     width: 345px;
     margin-top: -70px;
     margin-right: 150px;
-    margin-left: 50px;
+    margin-left: 50px
 }
 
 .product-3 img {
@@ -450,37 +532,37 @@ body {
 }
 
 .popular-description {
-    width: 500px;
+    width: 500px
 }
 
 .description-paragraph {
     line-height: 30px;
-    width: 480px;
+    width: 480px
 }
 
 .product-2 .description-paragraph,
 .product-3 .description-paragraph {
-    width: 450px;
+    width: 450px
+}
+
+.popular-description a,
+.popular-slogan {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800
 }
 
 .popular-slogan {
-    margin: 0;
-    margin-bottom: 5px;
-    margin-top: -33px;
-    font-family: "Gilroy", "Arial", sans-serif;
-    font-size: 47px;
-    font-weight: 800;
-    letter-spacing: .47px;
-    line-height: 56px;
+    margin: -33px 0 5px;
     color: #000;
     z-index: 1;
+    font-size: 47px;
+    letter-spacing: .47px;
+    line-height: 56px
 }
 
 .popular-description a {
     position: relative;
-    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
-    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3.6px;
     line-height: 24px;
@@ -549,8 +631,7 @@ body {
     flex-wrap: wrap;
     width: 1160px;
     padding: 0;
-    margin: 0;
-    margin-top: -5px;
+    margin: -5px 0 0
 }
 
 .products-menu li {
@@ -562,17 +643,12 @@ body {
     font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
-    letter-spacing: .2px;
+    letter-spacing: .2px
 }
 
 .products-menu a::before {
     display: block;
-    margin-bottom: 33px;
-}
-
-.products-menu a::after {
-    position: absolute;
-    top: -195px
+    margin-bottom: 33px
 }
 
 .products-menu a::after,
@@ -580,7 +656,12 @@ body {
     content: " ";
     background-repeat: no-repeat;
     width: 160px;
-    height: 160px;
+    height: 160px
+}
+
+.products-menu a::after {
+    position: absolute;
+    top: -195px
 }
 
 .products-menu a::before {
@@ -624,7 +705,7 @@ body {
 
 .products-menu li:nth-child(2) {
     width: 120px;
-    margin-right: 40px;
+    margin-right: 40px
 }
 
 .products-link-1::after {
@@ -680,14 +761,12 @@ ul .products-link-2::after {
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .company-products {
     width: 1160px;
-    margin: 0 auto;
-    margin-bottom: 118px;
-    margin-top: 95px;
+    margin: 95px auto 118px
 }
 
 .company-logo::before {
@@ -715,19 +794,23 @@ ul .products-link-2::after {
     display: flex
 }
 
+.services-button button,
+.services-list h2 {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800
+}
+
 .services-button button {
     position: relative;
-    font-family: "Gilroy", "Arial", sans-serif;
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 3.6px;
     text-align: center;
     width: 160px;
     text-transform: uppercase;
     margin-bottom: 40px;
     z-index: 1;
     border: 0;
-    background: 0 0
+    background: 0 0;
+    font-size: 18px;
+    letter-spacing: 3.6px
 }
 
 .services-button button::before {
@@ -750,12 +833,8 @@ ul .products-link-2::after {
 
 .services-list h2 {
     word-wrap: break-word;
-    margin: 0;
-    margin-bottom: 32px;
-    margin-top: -25px;
-    font-family: "Gilroy", "Arial", sans-serif;
+    margin: -25px 0 32px;
     font-size: 47px;
-    font-weight: 800;
     line-height: 1.02;
     letter-spacing: .5px;
     color: #000
@@ -811,8 +890,8 @@ ul .products-link-2::after {
     right: -250px
 }
 
-.service-delivery::before,
 .service-credit::before,
+.service-delivery::before,
 .service-guarantee::before {
     position: absolute;
     content: "";
@@ -891,13 +970,19 @@ ul .products-link-2::after {
     margin: 0 auto 88px
 }
 
-.add-info h2 {
+.add-info h2,
+.delivery-companies li,
+.filters h2,
+.sorting h2 {
     font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
-    font-size: 47px;
+    color: #000
+}
+
+.add-info h2 {
     margin-bottom: 56px;
-    color: #000;
-    letter-spacing: .47px
+    letter-spacing: .47px;
+    font-size: 47px
 }
 
 .we {
@@ -913,10 +998,7 @@ ul .products-link-2::after {
 .delivery-companies li,
 .filters h2,
 .sorting h2 {
-    font-family: "Gilroy", "Arial", sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    color: #000
+    font-size: 16px
 }
 
 .delivery-companies li {
@@ -941,7 +1023,7 @@ ul .products-link-2::after {
 
 .contacts-map {
     display: block;
-    margin-bottom: 72px;
+    margin-bottom: 72px
 }
 
 .popup-map {
@@ -949,17 +1031,17 @@ ul .products-link-2::after {
     position: fixed;
     top: 100px;
     margin-left: -35%;
-    z-index: 1;
+    z-index: 1
 }
 
 .popup-map iframe {
     width: 960px;
     height: 560px;
-    border: none;
+    border: 0
 }
 
 .map-block {
-    position: relative;
+    position: relative
 }
 
 .add-info p {
@@ -1074,7 +1156,7 @@ ul .products-link-2::after {
 
 .filters {
     background-color: #ebebeb;
-    width: 54%;
+    width: 55%
 }
 
 .filters h2,
@@ -1087,10 +1169,9 @@ ul .products-link-2::after {
 
 .filters .filters-title {
     background-color: #d9d9d9;
-    padding: 23px 0 23px 25px;
     margin: 0 0 0 auto;
     text-align: right;
-    padding-right: 176px;
+    padding: 23px 176px 23px 25px
 }
 
 .filters form {
@@ -1129,45 +1210,46 @@ ul .products-link-2::after {
 .pop-up .pop-up-link-1 {
     font-size: 18px;
     font-weight: 800;
-    width: 200px
+    width: 200px;
+    font-family: "Gilroy", "Arial", sans-serif
 }
 
 .filters h3 {
     border-top: 2px solid #000;
     color: #000;
     padding-top: 10px;
-    font-family: "Gilroy", "Arial", sans-serif;
     margin-bottom: 25px
 }
 
-.products ul {
+.products ul,
+.products-element {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex
+}
+
+.products ul {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap
 }
 
+.pop-up,
 .products-element {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
+    flex-direction: column
+}
+
+.products-element {
     position: relative
 }
 
 .pop-up {
     display: none;
     position: absolute;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -1176,7 +1258,6 @@ ul .products-link-2::after {
 }
 
 .pop-up .pop-up-link-1 {
-    font-family: "Gilroy", "Arial", sans-serif;
     letter-spacing: 3.6px;
     text-transform: uppercase;
     text-align: center;
@@ -1385,7 +1466,8 @@ ul .products-link-2::after {
 .filters button,
 .pagination a {
     font-weight: 800;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-family: "Gilroy", "Arial", sans-serif
 }
 
 .filters button {
@@ -1396,7 +1478,6 @@ ul .products-link-2::after {
     margin-top: 20px;
     position: relative;
     z-index: 1;
-    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     letter-spacing: 3.6px
 }
@@ -1431,7 +1512,6 @@ ul .products-link-2::after {
 }
 
 .pagination a {
-    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 3.2px
@@ -1532,9 +1612,6 @@ ul .products-link-2::after {
 .footer-container__list {
     padding: 0;
     margin: 0 0 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap
 }
@@ -1543,10 +1620,15 @@ ul .products-link-2::after {
     margin-left: 42px
 }
 
-.footer-container {
+.footer-container,
+.footer-container__line-2,
+.footer-container__list {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex
+}
+
+.footer-container {
     width: 1160px;
     padding-top: 65px;
     -webkit-box-orient: vertical;
@@ -1557,13 +1639,10 @@ ul .products-link-2::after {
 }
 
 .footer-container__line-2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin-bottom: 45px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .footer-navigation {
@@ -1572,7 +1651,7 @@ ul .products-link-2::after {
     font-size: 18px;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 3.6px;
+    letter-spacing: 3.6px
 }
 
 .footer-container__list a,
@@ -1594,13 +1673,13 @@ ul .products-link-2::after {
 }
 
 .phone {
-    margin-left: 35px;
+    margin-left: 35px
 }
 
 .address {
     -webkit-box-ordinal-group: -2;
     -ms-flex-order: -3;
-    order: -3;
+    order: -3
 }
 
 .footer-container__line-3 {
@@ -1628,8 +1707,7 @@ ul .products-link-2::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: auto;
-    margin-top: 0px;
+    margin: 0 auto auto
 }
 
 .decoration-line-2 {
@@ -1657,19 +1735,19 @@ ul .products-link-2::after {
     width: 32px;
     height: 32px;
     opacity: .3;
-    margin: 0 11px;
+    margin: 0 11px
 }
 
 .Facebook {
-    background-image: url(../img/facebook.svg);
+    background-image: url(../img/facebook.svg)
 }
 
 .Instagram {
-    background-image: url(../img/insta.svg);
+    background-image: url(../img/insta.svg)
 }
 
 .Twitter {
-    background-image: url(../img/twit.svg);
+    background-image: url(../img/twit.svg)
 }
 
 .footer-container__list a:hover,
@@ -1708,7 +1786,7 @@ ul .products-link-2::after {
 
 .contacts-window label {
     display: block;
-    font-size: 18px;
+    font-size: 18px
 }
 
 .contacts-window input,
@@ -1718,7 +1796,7 @@ ul .products-link-2::after {
     border: 0;
     padding: 20px;
     width: 360px;
-    font-size: 14px;
+    font-size: 14px
 }
 
 .contacts-window form {
@@ -1751,7 +1829,7 @@ ul .products-link-2::after {
     border-radius: 50%;
     border: 0;
     opacity: .5;
-    z-index: 2;
+    z-index: 2
 }
 
 .close:hover {
@@ -1832,94 +1910,28 @@ ul .products-link-2::after {
 .wow-pop-up {
     display: block;
     -webkit-animation: bounce 1s;
-    animation: bounce 1s;
+    animation: bounce 1s
 }
 
 .modal-error {
-    -webkit-animation: shake 0.8s;
-    animation: shake 0.8s;
+    -webkit-animation: shake .8s;
+    animation: shake .8s
 }
 
-@-webkit-keyframes bounce {
-    0% {
-        -webkit-transform: translateY(-2000px);
-        transform: translateY(-2000px);
-    }
-    70% {
-        -webkit-transform: translateY(30px);
-        transform: translateY(30px);
-    }
-    90% {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+@media(min-width: 1440px) {
+    .filters {
+        width: 54%
     }
 }
 
-@keyframes bounce {
-    0% {
-        -webkit-transform: translateY(-2000px);
-        transform: translateY(-2000px);
-    }
-    70% {
-        -webkit-transform: translateY(30px);
-        transform: translateY(30px);
-    }
-    90% {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
-    }
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+@media(min-width: 1600px) {
+    .filters {
+        width: 53%
     }
 }
 
-@-webkit-keyframes shake {
-    0%,
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        -webkit-transform: translateX(-10px);
-        transform: translateX(-10px);
-    }
-    20%,
-    40%,
-    60%,
-    80% {
-        -webkit-transform: translateX(10px);
-        transform: translateX(10px);
-    }
-}
-
-@keyframes shake {
-    0%,
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        -webkit-transform: translateX(-10px);
-        transform: translateX(-10px);
-    }
-    20%,
-    40%,
-    60%,
-    80% {
-        -webkit-transform: translateX(10px);
-        transform: translateX(10px);
+@media(min-width: 1920px) {
+    .filters {
+        width: 50%
     }
 }
