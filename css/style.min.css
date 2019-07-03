@@ -1,3 +1,87 @@
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px)
+    }
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-2000px);
+        transform: translateY(-2000px)
+    }
+    70% {
+        -webkit-transform: translateY(30px);
+        transform: translateY(30px)
+    }
+    90% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+    to {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes shake {
+    0%,
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+
+@keyframes shake {
+    0%,
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+}
+
 @font-face {
     font-family: "Gilroy";
     src: url(../fonts/gilroy-800-normal.woff2) format("woff2"), url(../fonts/gilroy-800-normal.woff) format("woff");
@@ -22,7 +106,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 24px;
     font-weight: 300;
@@ -42,16 +126,19 @@ a {
     overflow: hidden;
     border: 0;
     padding: 0;
+    -webkit-clip-path: inset(50%);
     clip-path: inset(50%)
 }
 
 *,
 ::after,
 ::before {
+    -webkit-box-sizing: inherit;
     box-sizing: inherit
 }
 
 html {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -70,13 +157,19 @@ body {
 
 .header-block-1,
 .main-header-block {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #f7e296;
     width: 1160px;
     margin: 40px auto 0;
     padding: 35px 60px;
     min-height: 186px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column
 }
 
@@ -86,12 +179,15 @@ body {
 
 .header-operations {
     padding: 0;
-    display: flex;
     margin: 0 0 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center
 }
 
 .header-operations .header-login {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: auto
 }
@@ -114,16 +210,21 @@ body {
     width: 100%
 }
 
+.header-operations,
 .search form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex
 }
 
 .search {
     width: 440px;
     color: #000;
+    -webkit-box-ordinal-group: -3;
+    -ms-flex-order: -4;
     order: -4;
     position: relative;
-    margin-right: 129px;
+    margin-right: 125px;
     padding-left: 25px;
     border-bottom: 2px solid transparent
 }
@@ -199,7 +300,10 @@ body {
 .navigation-list {
     margin: 0;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap
 }
 
@@ -220,20 +324,17 @@ body {
 }
 
 .header-catalog::before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg)
 }
 
-.header-catalog-list li {
-    display: flex;
-    flex-direction: column;
-    margin-right: 55px;
-    line-height: 36px;
-    flex-wrap: wrap
-}
-
-.header-catalog-list {
+.header-catalog-block {
     padding-left: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     position: absolute;
     background-color: #f7e296;
@@ -245,15 +346,28 @@ body {
     display: none
 }
 
+.header-catalog-list {
+    padding: 0;
+    margin-right: 70px
+}
+
+.header-catalog-list li {
+    margin-bottom: 15px
+}
+
 .navigation-list li:nth-child(2) {
     margin-left: 35px;
     margin-right: 105px
 }
 
 .header-conteiner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 18px;
     text-transform: uppercase;
@@ -288,7 +402,7 @@ body {
 }
 
 .page-title {
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     letter-spacing: .47px;
     color: #000
@@ -297,6 +411,8 @@ body {
 .breadcrumbs {
     padding: 0;
     margin-top: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 47px
 }
@@ -309,6 +425,7 @@ body {
 
 .breadcrumbs li:not(:last-child)::after {
     display: inline-block;
+    vertical-align: middle;
     content: "";
     background-image: url(../img/nav-arrow.svg);
     height: 7px;
@@ -328,14 +445,19 @@ body {
 
 .index-catalog,
 .popular-description {
-    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column
 }
 
 .index-catalog {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0 auto 165px;
+    margin: 0 auto 180px;
     width: 1160px
 }
 
@@ -355,19 +477,22 @@ body {
     height: 485px;
     width: 345px;
     margin-top: -70px;
-    margin-right: 200px
+    margin-right: 150px;
+    margin-left: 50px
 }
 
 .product-3 img {
     width: 526px;
     height: 334px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-right: 50px;
-    margin-left: -30px
+    margin-left: -50px
 }
 
 .index-catalog article {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 485px;
     padding-left: 90px
@@ -375,7 +500,7 @@ body {
 
 .popular::before {
     position: absolute;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 179px;
     font-weight: 800;
     color: #fff;
@@ -407,38 +532,37 @@ body {
 }
 
 .popular-description {
-    width: 480px;
-    padding-top: 83px
+    width: 500px
 }
 
-.popular-description:nth-child(2) {
-    line-height: 30px
+.description-paragraph {
+    line-height: 30px;
+    width: 480px
+}
+
+.product-2 .description-paragraph,
+.product-3 .description-paragraph {
+    width: 450px
+}
+
+.popular-description a,
+.popular-slogan {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800
 }
 
 .popular-slogan {
-    position: absolute;
-    margin-top: -116px;
-    font-family: "Gilroy";
+    margin: -33px 0 5px;
+    color: #000;
+    z-index: 1;
     font-size: 47px;
-    font-weight: 800;
     letter-spacing: .47px;
-    line-height: 56px;
-    color: #000
-}
-
-.products-2 .popular-slogan {
-    width: 258px
-}
-
-.product-3 .popular-slogan {
-    width: 500px
+    line-height: 56px
 }
 
 .popular-description a {
     position: relative;
-    font-family: "Gilroy";
     font-size: 18px;
-    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3.6px;
     line-height: 24px;
@@ -446,7 +570,7 @@ body {
     width: 220px;
     text-align: center;
     margin-top: 37px;
-    margin-bottom: 68px
+    margin-bottom: 70px
 }
 
 .popular-description a::before {
@@ -463,6 +587,8 @@ body {
 .specification__list {
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex
 }
 
@@ -474,7 +600,7 @@ body {
 .specification__list p:first-child {
     padding: 0;
     margin: 0;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 36px;
     font-weight: 300;
     color: #000;
@@ -495,10 +621,17 @@ body {
 }
 
 .products-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    padding: 173px 0 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    flex-wrap: wrap
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 1160px;
+    padding: 0;
+    margin: -5px 0 0
 }
 
 .products-menu li {
@@ -507,20 +640,27 @@ body {
 
 .products-menu a {
     position: relative;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
-    line-height: 1.33px;
     letter-spacing: .2px
+}
+
+.products-menu a::before {
+    display: block;
+    margin-bottom: 33px
 }
 
 .products-menu a::after,
 .products-menu a::before {
     content: " ";
-    position: absolute;
     background-repeat: no-repeat;
     width: 160px;
-    height: 160px;
+    height: 160px
+}
+
+.products-menu a::after {
+    position: absolute;
     top: -195px
 }
 
@@ -536,8 +676,8 @@ body {
 
 .radio-bar {
     position: absolute;
-    top: 209px;
-    right: 83px;
+    top: 548px;
+    right: 223px;
     z-index: 1
 }
 
@@ -546,20 +686,26 @@ body {
     width: 12px;
     content: "";
     display: inline-block;
+    vertical-align: middle;
     border: 1px solid #000;
     border-radius: 50%;
-    margin-left: 16px
+    margin-left: 17px
 }
 
 .bar:checked+label:after {
     margin-left: -9px;
-    margin-top: 9px;
+    margin-top: 12px;
     position: absolute;
     content: "";
     height: 5px;
     width: 5px;
     border: 1px solid #000;
     border-radius: 50%
+}
+
+.products-menu li:nth-child(2) {
+    width: 120px;
+    margin-right: 40px
 }
 
 .products-link-1::after {
@@ -606,19 +752,31 @@ ul .products-link-2::after {
 }
 
 .company-products ul {
-    margin-top: 95px;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    position: relative;
-    right: 190px
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .company-products {
     width: 1160px;
-    margin: 0 auto 217px
+    margin: 95px auto 118px
 }
 
-.company-products li {
-    margin: 0 150px
+.company-logo::before {
+    content: "";
+    display: block;
+    width: 260px;
+    height: 100px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: .2
 }
 
 .services {
@@ -631,22 +789,28 @@ ul .products-link-2::after {
     width: 1160px;
     margin: 0 auto;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex
+}
+
+.services-button button,
+.services-list h2 {
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-weight: 800
 }
 
 .services-button button {
     position: relative;
-    font-family: "Gilroy";
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 3.6px;
     text-align: center;
     width: 160px;
     text-transform: uppercase;
     margin-bottom: 40px;
     z-index: 1;
     border: 0;
-    background: 0 0
+    background: 0 0;
+    font-size: 18px;
+    letter-spacing: 3.6px
 }
 
 .services-button button::before {
@@ -668,18 +832,16 @@ ul .products-link-2::after {
 }
 
 .services-list h2 {
-    position: absolute;
-    margin-top: -65px;
-    font-family: "Gilroy";
+    word-wrap: break-word;
+    margin: -25px 0 32px;
     font-size: 47px;
-    font-weight: 800;
+    line-height: 1.02;
     letter-spacing: .5px;
     color: #000
 }
 
 .services-list p {
-    width: 425px;
-    margin-top: 51px;
+    width: 435px;
     line-height: 30px;
     letter-spacing: .15px
 }
@@ -713,26 +875,23 @@ ul .products-link-2::after {
 }
 
 .service-delivery::before {
-    content: "";
-    position: absolute;
     background-image: url(../img/delivery.svg);
-    background-repeat: no-repeat;
     height: 164px;
     width: 136px;
-    top: -65px;
-    right: -270px
+    top: 10px;
+    right: -260px
 }
 
 .service-guarantee::before {
     background-image: url(../img/warranty.svg);
     height: 194px;
     width: 171px;
-    top: -90px;
-    right: -190px
+    top: -15px;
+    right: -250px
 }
 
-.company-logo::before,
 .service-credit::before,
+.service-delivery::before,
 .service-guarantee::before {
     position: absolute;
     content: "";
@@ -741,13 +900,15 @@ ul .products-link-2::after {
 
 .service-credit::before {
     background-image: url(../img/credit.svg);
-    top: -90px;
-    right: -190px;
+    top: -15px;
+    right: -250px;
     height: 186px;
     width: 156px
 }
 
 .services-button button:hover::before {
+    -webkit-transform: scaley(5);
+    -ms-transform: scaley(5);
     transform: scaley(5)
 }
 
@@ -778,13 +939,6 @@ ul .products-link-2::after {
     display: none
 }
 
-.company-logo::before {
-    width: 260px;
-    height: 100px;
-    filter: grayscale(100%);
-    opacity: .2
-}
-
 .logo-1::before {
     background-image: url(../img/dji-logo.png)
 }
@@ -803,23 +957,32 @@ ul .products-link-2::after {
 
 .company-logo:focus::before,
 .company-logo:hover::before {
+    -webkit-filter: grayscale(0);
     filter: grayscale(0);
     opacity: 1
 }
 
 .add-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 1160px;
     margin: 0 auto 88px
 }
 
-.add-info h2 {
-    font-family: "Gilroy";
+.add-info h2,
+.delivery-companies li,
+.filters h2,
+.sorting h2 {
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
-    font-size: 47px;
+    color: #000
+}
+
+.add-info h2 {
     margin-bottom: 56px;
-    color: #000;
-    letter-spacing: .47px
+    letter-spacing: .47px;
+    font-size: 47px
 }
 
 .we {
@@ -835,10 +998,7 @@ ul .products-link-2::after {
 .delivery-companies li,
 .filters h2,
 .sorting h2 {
-    font-family: "Gilroy";
-    font-size: 16px;
-    font-weight: 800;
-    color: #000
+    font-size: 16px
 }
 
 .delivery-companies li {
@@ -863,10 +1023,25 @@ ul .products-link-2::after {
 
 .contacts-map {
     display: block;
-    margin-bottom: 72px;
-    width: 560px;
-    height: 222px;
+    margin-bottom: 72px
+}
+
+.popup-map {
+    display: none;
+    position: fixed;
+    top: 100px;
+    margin-left: -35%;
+    z-index: 1
+}
+
+.popup-map iframe {
+    width: 960px;
+    height: 560px;
     border: 0
+}
+
+.map-block {
+    position: relative
 }
 
 .add-info p {
@@ -894,7 +1069,7 @@ ul .products-link-2::after {
 .more,
 .write-us {
     position: relative;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 800;
     text-transform: uppercase;
@@ -921,29 +1096,35 @@ ul .products-link-2::after {
 .popular-description a:hover::before,
 .send:hover::before,
 .write-us:hover::before {
+    -webkit-transform: scaley(5);
+    -ms-transform: scaley(5);
     transform: scaley(5)
 }
 
 .catalog,
-.products-list article:hover .pop-up,
+.products-element:hover .pop-up,
 .sorting,
 .sorting ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex
 }
 
 .sorting {
     background-color: #ebebeb;
-    padding-left: 79px;
+    padding-left: 75px;
     margin-bottom: 45px
 }
 
 .sorting ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-left: 12px
 }
 
 .sorting-list a {
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     margin-right: 31px;
     opacity: .3
@@ -956,6 +1137,7 @@ ul .products-link-2::after {
 .arrow::before {
     content: "";
     display: inline-block;
+    vertical-align: middle;
     background-repeat: no-repeat;
     height: 10px;
     width: 11px;
@@ -987,8 +1169,9 @@ ul .products-link-2::after {
 
 .filters .filters-title {
     background-color: #d9d9d9;
-    padding: 23px 0 23px 25px;
-    margin: 0 0 0 auto
+    margin: 0 0 0 auto;
+    text-align: right;
+    padding: 23px 176px 23px 25px
 }
 
 .filters form {
@@ -1027,40 +1210,54 @@ ul .products-link-2::after {
 .pop-up .pop-up-link-1 {
     font-size: 18px;
     font-weight: 800;
-    width: 200px
+    width: 200px;
+    font-family: "Gilroy", "Arial", sans-serif
 }
 
 .filters h3 {
     border-top: 2px solid #000;
     color: #000;
     padding-top: 10px;
-    font-family: "gilroy";
     margin-bottom: 25px
 }
 
+.products ul,
+.products-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
 .products ul {
-    display: flex;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap
 }
 
-.products article {
-    display: flex;
-    flex-direction: column;
+.pop-up,
+.products-element {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.products-element {
     position: relative
 }
 
 .pop-up {
     display: none;
     position: absolute;
-    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-left: 80px;
     bottom: 47%
 }
 
 .pop-up .pop-up-link-1 {
-    font-family: "Gilroy";
     letter-spacing: 3.6px;
     text-transform: uppercase;
     text-align: center;
@@ -1081,7 +1278,7 @@ ul .products-link-2::after {
 
 .pop-up .pop-up-link-2 {
     opacity: .5;
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 13px;
     font-weight: 300;
     letter-spacing: .13px;
@@ -1090,7 +1287,7 @@ ul .products-link-2::after {
 
 .mark-new::before,
 .products-list a {
-    font-family: "gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800
 }
 
@@ -1132,13 +1329,17 @@ ul .products-link-2::after {
 
 .products-list-block {
     margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between
 }
 
 .price {
     color: #464646;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: .16px;
@@ -1185,6 +1386,7 @@ ul .products-link-2::after {
     background-color: #d9d9d9;
     border: 8px solid #fff;
     border-radius: 50%;
+    -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
     box-shadow: 0 2px 1px 0 #cfcfcf;
     cursor: pointer
 }
@@ -1199,7 +1401,7 @@ ul .products-link-2::after {
 
 .price-controls,
 .price-controls input {
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 14px;
     font-weight: 300;
     color: rgba(0, 0, 0, .2)
@@ -1264,7 +1466,8 @@ ul .products-link-2::after {
 .filters button,
 .pagination a {
     font-weight: 800;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-family: "Gilroy", "Arial", sans-serif
 }
 
 .filters button {
@@ -1275,7 +1478,6 @@ ul .products-link-2::after {
     margin-top: 20px;
     position: relative;
     z-index: 1;
-    font-family: "Gilroy";
     font-size: 18px;
     letter-spacing: 3.6px
 }
@@ -1292,10 +1494,16 @@ ul .products-link-2::after {
 }
 
 .pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 760px;
     background-color: #ebebeb;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0;
     margin-left: 75px;
@@ -1304,7 +1512,6 @@ ul .products-link-2::after {
 }
 
 .pagination a {
-    font-family: Gilroy;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 3.2px
@@ -1360,12 +1567,14 @@ ul .products-link-2::after {
 }
 
 .pop-up-link-2:active,
-.products-list article:hover img {
+.products-element:hover img {
     opacity: .3
 }
 
 .filters button:hover::before,
 .pop-up-link-1:hover::before {
+    -webkit-transform: scaley(5);
+    -ms-transform: scaley(5);
     transform: scaley(5)
 }
 
@@ -1385,6 +1594,7 @@ ul .products-link-2::after {
     color: #fff;
     width: 100%;
     min-height: 325px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -1393,6 +1603,8 @@ ul .products-link-2::after {
 }
 
 .footer-container__line-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 12px
 }
@@ -1400,7 +1612,7 @@ ul .products-link-2::after {
 .footer-container__list {
     padding: 0;
     margin: 0 0 0 auto;
-    display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap
 }
 
@@ -1408,45 +1620,71 @@ ul .products-link-2::after {
     margin-left: 42px
 }
 
+.footer-container,
+.footer-container__line-2,
+.footer-container__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
 .footer-container {
-    display: flex;
     width: 1160px;
     padding-top: 65px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 0 auto
 }
 
 .footer-container__line-2 {
-    display: flex;
-    margin-bottom: 45px
+    margin-bottom: 45px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
 }
 
 .footer-navigation {
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 18px;
     color: #fff;
     text-transform: uppercase;
-    flex-wrap: wrap;
-    letter-spacing: 3.6px;
-    margin-left: 105px;
-    margin-right: auto
+    letter-spacing: 3.6px
 }
 
 .footer-container__list a,
 .footer-navigation-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex
+}
+
+.footer-navigation-list {
+    padding: 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 630px
 }
 
 .footer-navigation-list li {
     margin: 0 17px
 }
 
+.phone {
+    margin-left: 35px
+}
+
 .address {
+    -webkit-box-ordinal-group: -2;
+    -ms-flex-order: -3;
     order: -3
 }
 
 .footer-container__line-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative
 }
@@ -1465,9 +1703,11 @@ ul .products-link-2::after {
 }
 
 .social {
+    padding-left: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    margin: auto;
-    position: relative
+    margin: 0 auto auto
 }
 
 .decoration-line-2 {
@@ -1475,6 +1715,8 @@ ul .products-link-2::after {
 }
 
 .footer-container__list li:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex
 }
 
@@ -1487,38 +1729,31 @@ ul .products-link-2::after {
     margin-right: 11px
 }
 
-.social-icon::before {
-    position: absolute;
-    content: "";
+.social-icon {
+    display: block;
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
     opacity: .3;
-    bottom: -12px
+    margin: 0 11px
 }
 
-.Facebook::before {
-    background-image: url(../img/facebook.svg);
-    margin-left: -78px
+.Facebook {
+    background-image: url(../img/facebook.svg)
 }
 
-.Instagram::before {
-    position: absolute;
-    content: "";
-    background-image: url(../img/insta.svg);
-    margin-left: -22px
+.Instagram {
+    background-image: url(../img/insta.svg)
 }
 
-.Twitter::before {
-    background-image: url(../img/twit.svg);
-    margin-left: 32px
+.Twitter {
+    background-image: url(../img/twit.svg)
 }
 
 .footer-container__list a:hover,
 .footer-logo:hover,
 .footer-navigation-list li:hover,
 .html-academy:hover,
-.social-icon:focus,
 .social-icon:hover {
     opacity: .6
 }
@@ -1535,17 +1770,23 @@ ul .products-link-2::after {
     background-color: #fff;
     top: 50px;
     position: fixed;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
-    font-size: 18px;
     width: 960px;
     min-height: 553px;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(4, 6, 6, .2);
     box-shadow: 0 10px 20px 0 rgba(4, 6, 6, .2);
     padding: 95px 100px;
     display: none;
     margin-left: 16%;
     z-index: 100
+}
+
+.contacts-window label {
+    display: block;
+    font-size: 18px
 }
 
 .contacts-window input,
@@ -1554,12 +1795,16 @@ ul .products-link-2::after {
     background-color: #f2f2f2;
     border: 0;
     padding: 20px;
-    width: 360px
+    width: 360px;
+    font-size: 14px
 }
 
 .contacts-window form {
     font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 0 auto
 }
@@ -1573,7 +1818,8 @@ ul .products-link-2::after {
     min-height: 155px
 }
 
-.close {
+.close-map,
+.close-window {
     background-color: #f0c52e;
     position: absolute;
     right: 35px;
@@ -1582,7 +1828,8 @@ ul .products-link-2::after {
     height: 54px;
     border-radius: 50%;
     border: 0;
-    opacity: .5
+    opacity: .5;
+    z-index: 2
 }
 
 .close:hover {
@@ -1598,22 +1845,26 @@ ul .products-link-2::after {
     position: absolute;
     top: 12px;
     right: 26px;
-    content: """";
+    content: "";
     height: 30px;
     width: 2px;
     background-color: #e5e5e5
 }
 
 .close:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg)
 }
 
 .close:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg)
 }
 
 .send {
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-weight: 800;
     font-size: 18px;
     letter-spacing: 3.6px;
@@ -1657,5 +1908,12 @@ ul .products-link-2::after {
 }
 
 .wow-pop-up {
-    display: block
+    display: block;
+    -webkit-animation: bounce 1s;
+    animation: bounce 1s
+}
+
+.modal-error {
+    -webkit-animation: shake .8s;
+    animation: shake .8s
 }
